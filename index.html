@@ -1025,6 +1025,7 @@ const CONFIG = {
     if (String(fd.get('_honey') || '')) return;
     lead._subject = 'Nouvelle demande Wenov Short : ' + lead.forfait + ' (' + prenom + ')';
     lead._template = 'table';
+    lead.email = courriel;
     lead._replyto = courriel;
 
     st.busy = true;
