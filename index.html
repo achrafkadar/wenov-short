@@ -686,6 +686,7 @@ html{scroll-behavior:auto}
 <div data-if="isCarte" hidden>
 <p style="margin: 0; padding: 12px 14px; border-radius: 12px; background: #141414; border: 1px solid #2A2A2A; font-size: 14px; line-height: 1.45"><span style="color: #8F8F8F">Votre projet&nbsp;: </span><strong class="js-cb">20&nbsp;vidéos de 30&nbsp;s</strong>. <a href="#forfaits" style="font-weight: 700">Modifier</a></p>
 </div>
+<div class="sr" aria-hidden="true"><label for="f-hp">Ne pas remplir</label><input id="f-hp" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
 <div class="field">
 <label for="f-prenom">Prénom</label>
 <input id="f-prenom" class="inp" name="prenom" type="text" autocomplete="given-name" aria-invalid="false" aria-describedby="e-prenom">
@@ -796,9 +797,9 @@ html{scroll-behavior:auto}
 /* ===== Réglages à compléter ===== */
 const CONFIG = {
   // URL qui reçoit les demandes (Formspree, webhook Make ou Zapier, GHL...). Vide = mode démo, rien n'est envoyé.
-  endpoint: '',
+  endpoint: 'https://formsubmit.co/ajax/ads@wenov.ca',
   // Courriel affiché si l'envoi échoue.
-  courrielSecours: '[VOTRE COURRIEL]'
+  courrielSecours: 'ads@wenov.ca'
 };
 /* ================================ */
 
@@ -1021,6 +1022,10 @@ const CONFIG = {
       date: new Date().toISOString()
     };
     Object.assign(lead, utm);
+    if (String(fd.get('_honey') || '')) return;
+    lead._subject = 'Nouvelle demande Wenov Short : ' + lead.forfait + ' (' + prenom + ')';
+    lead._template = 'table';
+    lead._replyto = courriel;
 
     st.busy = true;
     st.clap += 1;
