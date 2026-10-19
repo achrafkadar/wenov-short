@@ -797,9 +797,9 @@ html{scroll-behavior:auto}
 /* ===== Réglages à compléter ===== */
 const CONFIG = {
   // URL qui reçoit les demandes (Formspree, webhook Make ou Zapier, GHL...). Vide = mode démo, rien n'est envoyé.
-  endpoint: 'https://formsubmit.co/ajax/ads@wenov.ca',
+  endpoint: 'https://formsubmit.co/ajax/05c08e2595ea16120444862c11a171f1',
   // Courriel affiché si l'envoi échoue.
-  courrielSecours: 'ads@wenov.ca'
+  courrielSecours: ''
 };
 /* ================================ */
 
@@ -1058,7 +1058,7 @@ const CONFIG = {
     $('#btnFill').style.width = '0%';
     $('#submitText').textContent = PACKS[st.pack].cta;
     if (!ok) {
-      setErr('e-courriel', 'hasErrC', 'L’envoi n’a pas fonctionné. Réessayez ou écrivez-nous à ' + CONFIG.courrielSecours + '.');
+      setErr('e-courriel', 'hasErrC', 'L’envoi n’a pas fonctionné. Réessayez dans un instant.');
       return;
     }
     track('generate_lead', { forfait: lead.forfait, valeur: PACKS[st.pack].value });
