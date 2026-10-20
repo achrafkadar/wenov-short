@@ -314,6 +314,18 @@ section,footer{scroll-margin-top:76px}
 .sticky{display:none}
 .foot{padding-bottom:44px}
 }
+.marq{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marq-track{display:flex;gap:16px;width:max-content;padding:6px 0;animation:marq var(--marq-dur,60s) linear infinite}
+.marq:hover .marq-track,.marq:focus-within .marq-track{animation-play-state:paused}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.rv{flex:0 0 auto;width:min(340px,78vw);margin:0;display:flex;flex-direction:column;gap:14px;padding:22px;border-radius:20px;background:#0B0B0B;border:1px solid #2A2A2A}
+.rv-stars{display:flex;gap:3px;color:#FFE500}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55;color:#DADADA}
+.rv figcaption{display:flex;align-items:center;gap:12px;margin-top:auto}
+.rv-av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:#FFE500;color:#000;display:flex;align-items:center;justify-content:center;font-weight:900;font-stretch:75%;font-size:18px}
+.rv-n{display:block;font-size:15px;font-weight:800;color:#fff}
+.rv-r{display:block;font-size:13px;color:#8F8F8F}
+@media (prefers-reduced-motion:reduce){.marq{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.marq-track{animation:none}}
 @media (prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
@@ -664,6 +676,13 @@ html{scroll-behavior:auto}
 </div>
 </section>
 
+<section id="avis" hidden style="padding: clamp(76px, 9vw, 136px) 0; border-top: 1px solid #1A1A1A; overflow: hidden">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px)">
+<h2 class="cap" style="margin: 0 0 36px; font-size: clamp(44px, 5.8vw, 88px)">What they say.</h2>
+</div>
+<div class="marq" id="marq"><div class="marq-track" id="marqTrack"></div></div>
+</section>
+
 <section id="faq" style="padding: clamp(76px, 9vw, 136px) 0; border-top: 1px solid #1A1A1A">
 <div style="max-width: 900px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-direction: column; gap: 26px">
 <h2 style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px"><span class="cap" style="font-size: clamp(40px, 5.8vw, 88px)">Comments</span><span style="font-size: 22px; font-weight: 800; color: #8F8F8F; font-variant-numeric: tabular-nums">5</span></h2>
@@ -747,7 +766,10 @@ const CONFIG = {
   // Courriel affiché si l'envoi échoue.
   courrielSecours: '',
   // ID du pixel Meta (chiffres seulement). Vide = aucun pixel ni bannière de témoins.
-  metaPixelId: ''
+  metaPixelId: '',
+  // Avis clients RÉELS seulement (avec l'accord de chaque client). Vide = section cachée.
+  // Format : { nom: 'Prénom N.', role: 'Entreprise ou métier', texte: 'Avis exact du client' }
+  avis: []
 };
 /* ================================ */
 
@@ -1098,6 +1120,19 @@ const CONFIG = {
     }), { threshold: 0.4 });
     reels.forEach((v) => vio.observe(v));
   } else reels.forEach((v) => { v.controls = true; });
+
+  /* ---- Avis clients : bande défilante ---- */
+  if (Array.isArray(CONFIG.avis) && CONFIG.avis.length >= 2) {
+    const track = $('#marqTrack');
+    const star = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.1 6.3 20.3l1.2-6.4L2.8 9.5l6.4-.8z"></path></svg>';
+    const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const card = (a, dup) => '<figure class="rv"' + (dup ? ' aria-hidden="true"' : '') + '><span class="rv-stars" role="img" aria-label="5/5">' + star.repeat(5) + '</span><blockquote>' + esc(a.texte) + '</blockquote><figcaption><span class="rv-av" aria-hidden="true">' + esc(String(a.nom).charAt(0)) + '</span><span><span class="rv-n">' + esc(a.nom) + '</span><span class="rv-r">' + esc(a.role || '') + '</span></span></figcaption></figure>';
+    let list = CONFIG.avis.slice();
+    while (list.length < 6) list = list.concat(CONFIG.avis);
+    track.innerHTML = list.map((a) => card(a, false)).join('') + list.map((a) => card(a, true)).join('');
+    track.style.setProperty('--marq-dur', (list.length * 7) + 's');
+    $('#avis').hidden = false;
+  }
   renderPack();
   renderCfg();
 }());
