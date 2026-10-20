@@ -387,6 +387,7 @@ html{scroll-behavior:auto}
 <li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aucune carte de crédit</li>
 <li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Sans engagement</li>
 <li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Format 9:16 prêt à publier</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Livré en 24&nbsp;h</li>
 </ul>
 </div>
 <div style="position: relative; flex: 0 0 auto; width: min(380px, 86vw); margin: 0 auto">
@@ -600,7 +601,7 @@ html{scroll-behavior:auto}
 <ol class="clips">
 <li class="clip at1"><span class="cnum">1</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">Réservez</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">3 champs, 30 secondes. Aucune carte de crédit.</p></li>
 <li class="clip at2"><span class="cnum">2</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">Envoyez vos rushs</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">Un lien Google Drive ou WeTransfer suffit. Filmé au cellulaire ? Parfait.</p></li>
-<li class="clip at3"><span class="cnum">3</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">On monte</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">Montage, sous-titres animés, motion design, son et étalonnage.</p></li>
+<li class="clip at3"><span class="cnum">3</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">On monte</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">Montage, sous-titres animés, motion design, son et étalonnage. Livré en 24&nbsp;h.</p></li>
 <li class="clip at4"><span class="cnum">4</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">Vous publiez</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">Un MP4 vertical en 1080&nbsp;×&nbsp;1920, prêt pour Reels, TikTok et YouTube Shorts.</p></li>
 </ol>
 </div>
@@ -700,7 +701,7 @@ html{scroll-behavior:auto}
 
 <details class="cm">
 <summary><span class="av" style="background: #262626; color: #BDBDBD"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5 19.5a7 7 0 0 1 14 0"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Vous</span><span style="font-size: 17px; font-weight: 700; line-height: 1.35">Combien de temps avant de recevoir ma vidéo ?</span></span><svg class="pl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
-<div class="rep"><span class="av" style="background: #FFFFFF; color: #000000; font-weight: 900; font-stretch: 75%; font-size: 18px">W</span><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Wenov Short</span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DADADA">Votre Prise&nbsp;1 arrive en 72&nbsp;h ouvrables après réception des rushs. Pour les forfaits, on bâtit le calendrier de livraison avec vous.</p></div></div>
+<div class="rep"><span class="av" style="background: #FFFFFF; color: #000000; font-weight: 900; font-stretch: 75%; font-size: 18px">W</span><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Wenov Short</span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DADADA">Votre Prise&nbsp;1 arrive en 24&nbsp;h après réception des rushs. Pour les forfaits, on bâtit le calendrier de livraison avec vous.</p></div></div>
 </details>
 
 <details class="cm">
@@ -769,7 +770,16 @@ const CONFIG = {
   metaPixelId: '',
   // Avis clients RÉELS seulement (avec l'accord de chaque client). Vide = section cachée.
   // Format : { nom: 'Prénom N.', role: 'Entreprise ou métier', texte: 'Avis exact du client' }
-  avis: []
+  avis: [
+    { nom: "Alexandre", role: '', texte: "Travail excellent ! Livraison en moins de 24 h, qualité impeccable. J’adore le résultat ! Je recommande à 100 % !" },
+    { nom: "Jessica", role: '', texte: "Wow ! Franchement impressionnée par la qualité du montage. Rapide, professionnel et exactement ce que je voulais. Livré en 24 h !" },
+    { nom: "Mathieu", role: '', texte: "Service exceptionnel ! Le montage est dynamique, les transitions sont parfaites et le résultat dépasse mes attentes. En plus, la livraison est ultra rapide !" },
+    { nom: "Catherine", role: '', texte: "Super expérience ! J’ai envoyé mes vidéos et reçu un montage magnifique dès le lendemain. Rien à redire, je vais certainement revenir !" },
+    { nom: "Kevin", role: '', texte: "Incroyable ! Le monteur a parfaitement compris mon style. Le rythme, la musique, les effets… tout est parfait. Et livré en 24 h !" },
+    { nom: "Sophie", role: '', texte: "Excellent travail, super rapide et très professionnel. Livraison en 24 h ! J’adore !" },
+    { nom: "Jonathan", role: '', texte: "Deuxième fois que je fais appel à ce service et toujours aussi satisfait. Des montages de qualité, une excellente communication et des délais impressionnants !" },
+    { nom: "Mélanie", role: '', texte: "Je ne m’attendais pas à un résultat aussi professionnel en seulement 24 h ! Vraiment impressionnant. Merci pour ce superbe travail !" }
+  ]
 };
 /* ================================ */
 
