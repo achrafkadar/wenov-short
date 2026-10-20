@@ -335,6 +335,26 @@ html{scroll-behavior:auto}
 .s-mot .sw{opacity:1}
 }
 </style>
+<script>
+/* Google Tag Manager + mode de consentement (Loi 25 : refusé par défaut) */
+window.WENOV_GTM_ID = '';
+window.dataLayer = window.dataLayer || [];
+function gtag(){ window.dataLayer.push(arguments); }
+(function () {
+  var c = null;
+  try { c = localStorage.getItem('wenov-consent'); } catch (e) { c = null; }
+  var v = c === 'oui' ? 'granted' : 'denied';
+  gtag('consent', 'default', { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v, wait_for_update: 500 });
+  window.dataLayer.push({ consent_ads: v, page_lang: document.documentElement.lang });
+  var id = window.WENOV_GTM_ID;
+  if (!id) return;
+  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+  document.head.appendChild(s);
+}());
+</script>
 </head>
 <body>
 
@@ -767,8 +787,6 @@ const CONFIG = {
   endpoint: 'https://formsubmit.co/ajax/05c08e2595ea16120444862c11a171f1',
   // Courriel affiché si l'envoi échoue.
   courrielSecours: '',
-  // ID du pixel Meta (chiffres seulement). Vide = aucun pixel ni bannière de témoins.
-  metaPixelId: '',
   // Avis clients RÉELS seulement (avec l'accord de chaque client). Vide = section cachée.
   // Format : { nom: 'Prénom N.', role: 'Entreprise ou métier', texte: 'Avis exact du client' }
   avis: [
@@ -809,7 +827,6 @@ const CONFIG = {
   const track = (event, params) => {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(Object.assign({ event: event }, params));
-    if (typeof window.fbq === 'function' && event === 'generate_lead') window.fbq('track', 'Lead', { content_name: params.forfait, value: params.valeur, currency: 'CAD' });
   };
 
   /* ---- Son ---- */
@@ -901,7 +918,7 @@ const CONFIG = {
       st.pack = pick.dataset.pick;
       renderPack();
       sfx('pop');
-      track('select_forfait', { forfait: st.pack });
+      track('select_package', { forfait: st.pack, valeur: PACKS[st.pack].value });
     }
     const sub = e.target.closest('[data-sub]');
     if (sub) {
@@ -993,7 +1010,7 @@ const CONFIG = {
     $('#f-courriel').setAttribute('aria-invalid', String(!!errC));
     setErr('e-prenom', 'hasErrP', errP);
     setErr('e-courriel', 'hasErrC', errC);
-    if (errP || errC) { (errP ? $('#f-prenom') : $('#f-courriel')).focus(); return; }
+    if (errP || errC) { track('form_error', { champ: errP ? 'prenom' : 'courriel' }); (errP ? $('#f-prenom') : $('#f-courriel')).focus(); return; }
 
     const lead = {
       forfait: PACKS[st.pack].name,
@@ -1004,6 +1021,8 @@ const CONFIG = {
       page: location.href,
       date: new Date().toISOString()
     };
+    const eventId = 'wl-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
+    lead.event_id = eventId;
     Object.assign(lead, utm);
     if (String(fd.get('_honey') || '')) return;
     lead._subject = 'New Wenov Short request (EN): ' + lead.forfait + ' (' + prenom + ')';
@@ -1044,7 +1063,12 @@ const CONFIG = {
       setErr('e-courriel', 'hasErrC', 'Your request didn’t go through. Please try again in a moment.');
       return;
     }
-    track('generate_lead', { forfait: lead.forfait, valeur: PACKS[st.pack].value });
+    track('form_submit_success', { forfait: st.pack, valeur: PACKS[st.pack].value, event_id: eventId });
+    try {
+      sessionStorage.setItem('wenov-lead', JSON.stringify({ forfait: st.pack, nom_forfait: lead.forfait, valeur: PACKS[st.pack].value, event_id: eventId, prenom: prenom, courriel: courriel, compte_rendu: false }));
+      setTimeout(() => { location.href = 'thank-you.html'; }, 250);
+      return;
+    } catch (err) { /* stockage indisponible : on affiche la confirmation sur place */ }
     $('#sentName').textContent = prenom;
     $('#sentEmail').textContent = courriel;
     $('#sentNext').textContent = st.pack === 'carte' ? 'with your quote.' : 'with the link to upload your footage.';
@@ -1102,21 +1126,17 @@ const CONFIG = {
   const KEY = 'wenov-consent';
   const getC = () => { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
   const setC = (v) => { try { localStorage.setItem(KEY, v); } catch (e) { /* stockage indisponible */ } };
-  function loadPixel() {
-    if (!CONFIG.metaPixelId || window.fbq) return;
-    /* eslint-disable */
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    window.fbq('init', CONFIG.metaPixelId);
-    window.fbq('track', 'PageView');
-  }
   const banner = $('#cookie');
   const cookieBtn = $('#cookieBtn');
-  if (!CONFIG.metaPixelId) { if (cookieBtn) cookieBtn.parentElement.innerHTML = '<a href="privacy.html" style="color: #BDBDBD">Privacy policy</a>'; }
+  const setConsent = (v) => {
+    gtag('consent', 'update', { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
+    window.dataLayer.push({ event: 'consent_update', consent_ads: v });
+  };
+  if (!window.WENOV_GTM_ID) { if (cookieBtn) cookieBtn.parentElement.innerHTML = '<a href="privacy.html" style="color: #BDBDBD">Privacy policy</a>'; }
   else {
-    if (getC() === 'oui') loadPixel();
-    else if (getC() !== 'non') banner.hidden = false;
-    $('#cookieYes').addEventListener('click', () => { setC('oui'); banner.hidden = true; loadPixel(); });
-    $('#cookieNo').addEventListener('click', () => { setC('non'); banner.hidden = true; });
+    if (getC() !== 'oui' && getC() !== 'non') banner.hidden = false;
+    $('#cookieYes').addEventListener('click', () => { setC('oui'); banner.hidden = true; setConsent('granted'); });
+    $('#cookieNo').addEventListener('click', () => { setC('non'); banner.hidden = true; setConsent('denied'); });
     cookieBtn.addEventListener('click', () => { banner.hidden = false; });
   }
 
@@ -1144,6 +1164,18 @@ const CONFIG = {
     track.style.setProperty('--marq-dur', (list.length * 7) + 's');
     $('#avis').hidden = false;
   }
+
+  /* ---- Suivi de chaque bouton et lien (dataLayer, lu par GTM) ---- */
+  const zone = (el) => { const sec = el.closest('section[id], header, footer, .sticky, .cookie'); if (!sec) return 'page'; return sec.id || (sec.classList.contains('sticky') ? 'barre-mobile' : sec.classList.contains('cookie') ? 'banniere-temoins' : sec.tagName.toLowerCase()); };
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('a, button, summary');
+    if (!el) return;
+    const txt = (el.getAttribute('aria-label') || el.innerText || '').replace(/\s+/g, ' ').trim().slice(0, 80);
+    track('cta_click', { cta_id: el.id || el.dataset.pick || el.dataset.sub || el.dataset.dur || el.dataset.sw || '', cta_text: txt, cta_zone: zone(el), cta_href: el.getAttribute('href') || '', cta_type: el.tagName.toLowerCase() });
+  }, true);
+  let formStarted = false;
+  form.addEventListener('focusin', () => { if (!formStarted) { formStarted = true; track('form_start', { forfait: st.pack }); } });
+  $$('details.cm').forEach((d) => d.addEventListener('toggle', () => { if (d.open) track('faq_open', { question: d.querySelector('summary').innerText.replace(/\s+/g, ' ').trim().slice(0, 80) }); }));
   renderPack();
   renderCfg();
 }());
