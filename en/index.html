@@ -680,7 +680,7 @@ html{scroll-behavior:auto}
 <section id="avis" hidden style="padding: clamp(76px, 9vw, 136px) 0; border-top: 1px solid #1A1A1A; overflow: hidden">
 <div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px)">
 <h2 class="cap" style="margin: 0 0 12px; font-size: clamp(44px, 5.8vw, 88px)">What they say.</h2>
-<p style="margin: 0 0 36px; font-size: 15px; color: #8F8F8F">Client reviews, in their original French.</p>
+<p style="margin: 0 0 36px; font-size: 15px; color: #8F8F8F">Client reviews, translated from French.</p>
 </div>
 <div class="marq" id="marq"><div class="marq-track" id="marqTrack"></div></div>
 </section>
@@ -772,14 +772,14 @@ const CONFIG = {
   // Avis clients RÉELS seulement (avec l'accord de chaque client). Vide = section cachée.
   // Format : { nom: 'Prénom N.', role: 'Entreprise ou métier', texte: 'Avis exact du client' }
   avis: [
-    { nom: "Alexandre", role: '', texte: "Travail excellent ! Livraison en moins de 24 h, qualité impeccable. J’adore le résultat ! Je recommande à 100 % !" },
-    { nom: "Jessica", role: '', texte: "Wow ! Franchement impressionnée par la qualité du montage. Rapide, professionnel et exactement ce que je voulais. Livré en 24 h !" },
-    { nom: "Mathieu", role: '', texte: "Service exceptionnel ! Le montage est dynamique, les transitions sont parfaites et le résultat dépasse mes attentes. En plus, la livraison est ultra rapide !" },
-    { nom: "Catherine", role: '', texte: "Super expérience ! J’ai envoyé mes vidéos et reçu un montage magnifique dès le lendemain. Rien à redire, je vais certainement revenir !" },
-    { nom: "Kevin", role: '', texte: "Incroyable ! Le monteur a parfaitement compris mon style. Le rythme, la musique, les effets… tout est parfait. Et livré en 24 h !" },
-    { nom: "Sophie", role: '', texte: "Excellent travail, super rapide et très professionnel. Livraison en 24 h ! J’adore !" },
-    { nom: "Jonathan", role: '', texte: "Deuxième fois que je fais appel à ce service et toujours aussi satisfait. Des montages de qualité, une excellente communication et des délais impressionnants !" },
-    { nom: "Mélanie", role: '', texte: "Je ne m’attendais pas à un résultat aussi professionnel en seulement 24 h ! Vraiment impressionnant. Merci pour ce superbe travail !" }
+    { nom: "Alexandre", role: '', texte: "Excellent work! Delivered in under 24 hours, flawless quality. I love the result! I recommend them 100%!" },
+    { nom: "Jessica", role: '', texte: "Wow! Honestly impressed by the quality of the edit. Fast, professional and exactly what I wanted. Delivered in 24 hours!" },
+    { nom: "Mathieu", role: '', texte: "Exceptional service! The edit is dynamic, the transitions are perfect and the result exceeds my expectations. On top of that, delivery is super fast!" },
+    { nom: "Catherine", role: '', texte: "Great experience! I sent my videos and got a beautiful edit the very next day. Nothing to fault, I’ll definitely be back!" },
+    { nom: "Kevin", role: '', texte: "Incredible! The editor understood my style perfectly. The pacing, the music, the effects… everything is perfect. And delivered in 24 hours!" },
+    { nom: "Sophie", role: '', texte: "Excellent work, super fast and very professional. Delivered in 24 hours! Love it!" },
+    { nom: "Jonathan", role: '', texte: "Second time using this service and still just as satisfied. Quality edits, excellent communication and impressive turnaround times!" },
+    { nom: "Mélanie", role: '', texte: "I didn’t expect such a professional result in just 24 hours! Truly impressive. Thank you for this amazing work!" }
   ]
 };
 /* ================================ */
@@ -1137,7 +1137,7 @@ const CONFIG = {
     const track = $('#marqTrack');
     const star = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.1 6.3 20.3l1.2-6.4L2.8 9.5l6.4-.8z"></path></svg>';
     const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-    const card = (a, dup) => '<figure class="rv" lang="fr"' + (dup ? ' aria-hidden="true"' : '') + '><span class="rv-stars" role="img" aria-label="5/5">' + star.repeat(5) + '</span><blockquote>' + esc(a.texte) + '</blockquote><figcaption><span class="rv-av" aria-hidden="true">' + esc(String(a.nom).charAt(0)) + '</span><span><span class="rv-n">' + esc(a.nom) + '</span><span class="rv-r">' + esc(a.role || '') + '</span></span></figcaption></figure>';
+    const card = (a, dup) => '<figure class="rv"' + (dup ? ' aria-hidden="true"' : '') + '><span class="rv-stars" role="img" aria-label="5/5">' + star.repeat(5) + '</span><blockquote>' + esc(a.texte) + '</blockquote><figcaption><span class="rv-av" aria-hidden="true">' + esc(String(a.nom).charAt(0)) + '</span><span><span class="rv-n">' + esc(a.nom) + '</span><span class="rv-r">' + esc(a.role || '') + '</span></span></figcaption></figure>';
     let list = CONFIG.avis.slice();
     while (list.length < 6) list = list.concat(CONFIG.avis);
     track.innerHTML = list.map((a) => card(a, false)).join('') + list.map((a) => card(a, true)).join('');
