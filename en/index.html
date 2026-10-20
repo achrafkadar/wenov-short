@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<title>Wenov Short</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Short-form video editing studio in Quebec: editing, animated captions, motion design, sound and color grading. Your first reel is 100% free.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Wenov Short: your first reel edited for free">
+<meta property="og:description" content="You film. We edit. The scroll stops.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://short.wenov.ca/en/">
+<meta property="og:image" content="https://short.wenov.ca/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://short.wenov.ca/en/">
+<link rel="alternate" hreflang="fr-CA" href="https://short.wenov.ca/">
+<link rel="alternate" hreflang="en-CA" href="https://short.wenov.ca/en/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
+<style>
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:#000}
+body{margin:0;background:#000;color:#fff;font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#FFE500}
+a:hover{color:#FFF07A}
+::selection{background:#FFE500;color:#000}
+:focus-visible{outline:3px solid #FFE500;outline-offset:3px}
+h1,h2,h3,h4{text-wrap:balance}
+p,li{text-wrap:pretty}
+section,footer{scroll-margin-top:76px}
+[data-if]{display:contents}[data-if][hidden]{display:none!important}
+.sr{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
+.cap{font-family:'Archivo','Arial Narrow','Helvetica Neue',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:-.005em}
+
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;border:2px solid transparent;font-family:inherit;font-size:17px;font-weight:800;font-stretch:100%;line-height:1.2;text-align:center;text-decoration:none;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease,background-color .12s ease,color .12s ease;-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{cursor:progress;transform:none}
+.btn-y{background:#FFE500;color:#000}
+.btn-y:hover{color:#000;box-shadow:0 0 0 4px rgba(255,229,0,.28)}
+.btn-ghost{background:transparent;color:#fff;border-color:#4A4A4A}
+.btn-ghost:hover{color:#fff;border-color:#fff}
+.btn-w{background:#fff;color:#000}
+.btn-w:hover{color:#000;box-shadow:0 0 0 4px rgba(255,255,255,.22)}
+.btn-o{background:transparent;color:#fff;border-color:#fff}
+.btn-o:hover{background:#fff;color:#000}
+.btn-k{background:#000;color:#FFE500}
+.btn-k:hover{color:#FFE500;box-shadow:0 0 0 4px rgba(0,0,0,.2)}
+
+.hdr{position:sticky;top:0;z-index:50;background:#000;border-bottom:1px solid #1C1C1C}
+.story{display:flex;gap:4px;max-width:1360px;margin:0 auto;padding:0 clamp(20px,4vw,56px) 8px}
+.story span{flex:1;height:3px;border-radius:2px;background:#2A2A2A;overflow:hidden}
+.story i{display:block;height:100%;background:#fff;transform-origin:left center;transform:scaleX(0)}
+.story span:nth-child(1) i{transform:scaleX(var(--s0,0))}
+.story span:nth-child(2) i{transform:scaleX(var(--s1,0))}
+.story span:nth-child(3) i{transform:scaleX(var(--s2,0))}
+.story span:nth-child(4) i{transform:scaleX(var(--s3,0))}
+.story span:nth-child(5) i{transform:scaleX(var(--s4,0))}
+.story span:nth-child(6) i{transform:scaleX(var(--s5,0))}
+.story span:nth-child(7) i{transform:scaleX(var(--s6,0))}
+.rec{display:block;width:9px;height:9px;border-radius:50%;background:#FF3B30;animation:rec 1.2s steps(1,end) infinite}
+@keyframes rec{0%{opacity:1}50%{opacity:.25}}
+.tcv::after{counter-reset:ts var(--tc-s,0) tf var(--tc-f,0);content:"00:00:" counter(ts,decimal-leading-zero) ":" counter(tf,decimal-leading-zero)}
+.sndbtn{flex:0 0 44px;width:44px;height:44px;border-radius:12px;border:1.5px solid #3A3A3A;background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .12s,color .12s}
+.sndbtn:hover{border-color:#fff}
+.sndbtn[aria-pressed="true"]{border-color:#FFE500;color:#FFE500}
+
+.vf{position:absolute;width:28px;height:28px;border:0 solid rgba(255,255,255,.5);pointer-events:none}
+.vf-tl{top:18px;left:18px;border-top-width:2px;border-left-width:2px}
+.vf-tr{top:18px;right:18px;border-top-width:2px;border-right-width:2px}
+.vf-bl{bottom:18px;left:18px;border-bottom-width:2px;border-left-width:2px}
+.vf-br{bottom:18px;right:18px;border-bottom-width:2px;border-right-width:2px}
+.kw{display:inline-block;padding:0 .07em;margin:0 -.07em;border-radius:.05em;color:rgba(255,255,255,.42);animation:kwSay .42s steps(1,end) forwards}
+.kw.k7{animation-name:kwLast}
+@keyframes kwSay{0%{color:#000;background-color:#FFE500}100%{color:#fff;background-color:rgba(255,229,0,0)}}
+@keyframes kwLast{0%,100%{color:#000;background-color:#FFE500}}
+.k1{animation-delay:.35s}.k2{animation-delay:.77s}.k3{animation-delay:1.19s}.k4{animation-delay:1.61s}.k5{animation-delay:2.03s}.k6{animation-delay:2.45s}.k7{animation-delay:2.87s}
+
+.monitor{position:relative;margin:0;padding:12px;border-radius:26px;background:#0B0B0B;border:1px solid #262626;box-shadow:0 40px 90px rgba(0,0,0,.7)}
+.mon-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:2px 6px 10px;font-size:13px;font-weight:600;font-stretch:112%;font-variant-numeric:tabular-nums;color:#8F8F8F}
+.screen{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:16px;background:#000}
+.safe{position:absolute;top:9%;right:7%;bottom:21%;left:7%;z-index:6;border:1px dashed rgba(255,255,255,.3);border-radius:6px;pointer-events:none}
+.beat{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 9%;text-align:center;opacity:0;animation:beat 6.3s linear infinite}
+.b1{animation-delay:.9s}.b2{animation-delay:1.6s}.b3{animation-delay:2.3s}.b4{animation-delay:3s}.b5{animation-delay:3.7s}.b6{animation-delay:4.4s}
+.b7{animation-name:beatLast;animation-delay:5.1s}
+@keyframes beat{0%,11.08%{opacity:1}11.11%,100%{opacity:0}}
+@keyframes beatLast{0%,33.3%{opacity:1}33.34%,100%{opacity:0}}
+.bw{display:block;animation:bwPop 6.3s cubic-bezier(.2,1.5,.35,1) infinite}
+.b1 .bw{animation-delay:.9s}.b2 .bw{animation-delay:1.6s}.b3 .bw{animation-delay:2.3s}.b4 .bw{animation-delay:3s}.b5 .bw{animation-delay:3.7s}.b6 .bw{animation-delay:4.4s}.b7 .bw{animation-delay:5.1s}
+@keyframes bwPop{0%{scale:1.4}3.6%,100%{scale:1}}
+.shape-c{position:absolute;top:50%;left:50%;width:66%;aspect-ratio:1;border-radius:50%;background:#FFE500;translate:-50% -50%;animation:shapeC 6.3s cubic-bezier(.2,1.3,.4,1) 3s infinite}
+@keyframes shapeC{0%{scale:.15}6%,100%{scale:1}}
+.mwv{display:flex;align-items:center;gap:5px;height:86px}
+.mwv i{display:block;width:7px;height:100%;border-radius:4px;background:#FFE500;animation:mwv .44s ease-in-out infinite alternate}
+.mwv i:nth-child(2n){animation-delay:-.21s}.mwv i:nth-child(3n){animation-delay:-.33s}.mwv i:nth-child(5n){animation-delay:-.12s}
+@keyframes mwv{from{transform:scaleY(.16)}to{transform:scaleY(1)}}
+.mire{position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;animation:mireOff .9s steps(1,end) forwards}
+.mire div{display:flex}
+.mire i{display:block;flex:1}
+@keyframes mireOff{0%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+.mon-ctl{display:flex;align-items:center;gap:12px;padding:12px 4px 2px}
+.playbtn{flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.scrub{position:relative;display:block;flex:1;height:6px;border-radius:3px;background:#2A2A2A;overflow:hidden}
+.scrub i{position:absolute;inset:0;display:block;background:#FFE500;transform-origin:left center;transform:scaleX(0);animation:scrub 6.3s linear .9s infinite}
+@keyframes scrub{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.is-paused .beat,.is-paused .bw,.is-paused .scrub i,.is-paused .mire,.is-paused .shape-c,.is-paused .mwv i{animation-play-state:paused}
+
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;margin:0 -2px;scrollbar-width:thin;scrollbar-color:#3A3A3A transparent;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:#3A3A3A;border-radius:3px}
+.reel{position:relative;flex:0 0 clamp(220px,20vw,292px);aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#0B0B0B;scroll-snap-align:start;margin:0}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.reel figcaption{position:absolute;left:10px;bottom:10px;z-index:2;padding:6px 10px;border-radius:9px;background:rgba(0,0,0,.72);color:#fff;font-size:13px;font-weight:700}
+.ph{position:relative;flex:0 0 clamp(220px,20vw,292px);aspect-ratio:9/16;border-radius:22px;border:2px dashed #3A3A3A;background:#0B0B0B;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#8F8F8F;scroll-snap-align:start}
+.tile{position:relative;flex:0 0 clamp(250px,22vw,292px);aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#141414;scroll-snap-align:start;isolation:isolate}
+.tile svg.scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.tlabel{position:absolute;top:12px;left:12px;z-index:5;margin:0;padding:7px 11px;border-radius:9px;background:rgba(0,0,0,.74);color:#fff;font-size:13px;font-weight:700;line-height:1.2}
+.tchips{position:absolute;left:10px;right:10px;bottom:10px;z-index:5;display:flex;gap:6px}
+.tchip{flex:1;min-height:44px;padding:0 6px;border-radius:11px;border:1.5px solid #3A3A3A;background:rgba(0,0,0,.78);color:#fff;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:background-color .12s,border-color .12s,color .12s}
+.tchip:hover{border-color:#fff}
+.tchip[aria-pressed="true"]{background:#FFE500;border-color:#FFE500;color:#000}
+
+.mouth{transform-box:fill-box;transform-origin:center;animation:talk .28s ease-in-out infinite alternate}
+@keyframes talk{from{transform:scaleY(.35)}to{transform:scaleY(1.3)}}
+.subs{position:absolute;left:7%;right:7%;top:59%;z-index:4;margin:0;display:flex;flex-wrap:wrap;justify-content:center;gap:5px 7px;font-family:'Archivo','Arial Narrow',sans-serif;font-stretch:75%;font-weight:900;font-size:23px;line-height:1.08;text-transform:uppercase}
+.sw{display:inline-block;color:#fff;text-shadow:2px 0 0 #000,-2px 0 0 #000,0 2px 0 #000,0 -2px 0 #000,2px 2px 0 #000,-2px 2px 0 #000,2px -2px 0 #000,-2px -2px 0 #000}
+.sw1{animation-delay:0s}.sw2{animation-delay:.45s}.sw3{animation-delay:.9s}.sw4{animation-delay:1.35s}.sw5{animation-delay:1.8s}.sw6{animation-delay:2.25s}.sw7{animation-delay:2.7s}
+.s-karaoke .sw{animation-name:swKar;animation-duration:3.6s;animation-timing-function:steps(1,end);animation-iteration-count:infinite}
+@keyframes swKar{0%{color:#FFE500}12.5%,100%{color:#fff}}
+.s-boite .sw{padding:2px 7px;border-radius:5px;background:#000;text-shadow:none;animation-name:swBox;animation-duration:3.6s;animation-timing-function:steps(1,end);animation-iteration-count:infinite}
+@keyframes swBox{0%{background-color:#FFE500;color:#000}12.5%,100%{background-color:#000;color:#fff}}
+.s-mot .sw{opacity:0;animation-duration:3.6s;animation-timing-function:ease-out;animation-iteration-count:infinite;animation-delay:0s}
+.s-mot .sw1{animation-name:m1}.s-mot .sw2{animation-name:m2}.s-mot .sw3{animation-name:m3}.s-mot .sw4{animation-name:m4}.s-mot .sw5{animation-name:m5}.s-mot .sw6{animation-name:m6}.s-mot .sw7{animation-name:m7}
+@keyframes m1{0%{opacity:1;scale:1.35}3%{scale:1}87.4%{opacity:1}87.5%,100%{opacity:0}}
+@keyframes m2{0%,12.4%{opacity:0}12.5%{opacity:1;scale:1.35}15.5%{scale:1}87.4%{opacity:1}87.5%,100%{opacity:0}}
+@keyframes m3{0%,24.9%{opacity:0}25%{opacity:1;scale:1.35}28%{scale:1}87.4%{opacity:1}87.5%,100%{opacity:0}}
+@keyframes m4{0%,37.4%{opacity:0}37.5%{opacity:1;scale:1.35}40.5%{scale:1}87.4%{opacity:1}87.5%,100%{opacity:0}}
+@keyframes m5{0%,49.9%{opacity:0}50%{opacity:1;scale:1.35}53%{scale:1}87.4%{opacity:1}87.5%,100%{opacity:0}}
+@keyframes m6{0%,62.4%{opacity:0}62.5%{opacity:1;scale:1.35}65.5%{scale:1}87.4%{opacity:1}87.5%,100%{opacity:0}}
+@keyframes m7{0%,74.9%{opacity:0}75%{opacity:1;scale:1.35}78%{scale:1}87.4%{opacity:1}87.5%,100%{opacity:0}}
+
+.mo{position:absolute;inset:0;background:#000}
+.mo-circle,.mo-ring{position:absolute;display:block;left:22%;top:17%;width:56%;aspect-ratio:1;border-radius:50%}
+.mo-circle{background:#FFE500}
+.mo-ring{border:2px solid #FFE500;opacity:0}
+.mo-bar{position:absolute;left:10%;right:10%;top:52%;height:66px;display:flex;align-items:center;justify-content:center;gap:9px;border-radius:7px;background:#fff;overflow:hidden;transform-origin:left center}
+.mo-mask{display:block;overflow:hidden}
+.mo-w{display:block;color:#000;font-family:'Archivo','Arial Narrow',sans-serif;font-stretch:62%;font-weight:900;font-size:36px;line-height:1.05;text-transform:uppercase}
+.mo-dot{position:absolute;display:block;right:12%;top:49%;width:18px;height:18px;border-radius:50%;background:#FF3B30}
+.mo-sub{position:absolute;left:0;right:0;top:69%;margin:0;text-align:center;color:#BDBDBD;font-size:13px;font-weight:600}
+.mo-a .mo-circle{animation:moCa 3s cubic-bezier(.2,1.25,.4,1) both}
+.mo-b .mo-circle{animation:moCb 3s cubic-bezier(.2,1.25,.4,1) both}
+@keyframes moCa{0%{transform:scale(0)}25%,100%{transform:scale(1)}}
+@keyframes moCb{0%{transform:scale(0)}25%,100%{transform:scale(1)}}
+.mo-a .mo-ring{animation:moRa 3s ease-out both}
+.mo-b .mo-ring{animation:moRb 3s ease-out both}
+@keyframes moRa{0%,24%{opacity:0;transform:scale(1)}26%{opacity:1;transform:scale(1)}62%,100%{opacity:0;transform:scale(1.7)}}
+@keyframes moRb{0%,24%{opacity:0;transform:scale(1)}26%{opacity:1;transform:scale(1)}62%,100%{opacity:0;transform:scale(1.7)}}
+.mo-a .mo-bar{animation:moBa 3s cubic-bezier(.7,0,.2,1) both}
+.mo-b .mo-bar{animation:moBb 3s cubic-bezier(.7,0,.2,1) both}
+@keyframes moBa{0%,22%{transform:scaleX(0)}42%,100%{transform:scaleX(1)}}
+@keyframes moBb{0%,22%{transform:scaleX(0)}42%,100%{transform:scaleX(1)}}
+.mo-a .mo-w{animation:moWa 3s cubic-bezier(.2,.9,.2,1) both}
+.mo-b .mo-w{animation:moWb 3s cubic-bezier(.2,.9,.2,1) both}
+.mo-a .mo-w2,.mo-b .mo-w2{animation-delay:.18s}
+@keyframes moWa{0%,40%{transform:translateY(110%)}55%,100%{transform:translateY(0)}}
+@keyframes moWb{0%,40%{transform:translateY(110%)}55%,100%{transform:translateY(0)}}
+.mo-a .mo-dot{animation:moDa 3s cubic-bezier(.2,1.6,.4,1) both}
+.mo-b .mo-dot{animation:moDb 3s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes moDa{0%,58%{transform:scale(0)}68%,100%{transform:scale(1)}}
+@keyframes moDb{0%,58%{transform:scale(0)}68%,100%{transform:scale(1)}}
+.mo-a .mo-sub{animation:moSa 3s ease-out both}
+.mo-b .mo-sub{animation:moSb 3s ease-out both}
+@keyframes moSa{0%,62%{opacity:0;transform:translateY(8px)}76%,100%{opacity:1;transform:translateY(0)}}
+@keyframes moSb{0%,62%{opacity:0;transform:translateY(8px)}76%,100%{opacity:1;transform:translateY(0)}}
+
+.grade{position:absolute;inset:0;touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+.grade:focus-within{outline:3px solid #FFE500;outline-offset:-3px;border-radius:22px}
+.grade svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.g-log{position:absolute;display:block;top:0;bottom:0;left:0;width:var(--cut,50%);border-right:2px solid #fff;-webkit-backdrop-filter:saturate(.22) contrast(.66) brightness(1.14);backdrop-filter:saturate(.22) contrast(.66) brightness(1.14);pointer-events:none}
+@supports not ((backdrop-filter:none) or (-webkit-backdrop-filter:none)){.g-log{background:rgba(150,150,150,.45)}}
+.g-handle{position:absolute;top:44%;left:var(--cut,50%);width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,.45)}
+.g-tag{position:absolute;bottom:14px;z-index:4;margin:0;padding:6px 10px;border-radius:8px;background:rgba(0,0,0,.74);color:#fff;font-size:12px;font-weight:800;pointer-events:none}
+.g-tag-l{left:12px}
+.g-tag-r{right:12px}
+
+.wv{position:absolute;left:9%;right:9%;top:19%;height:34%;display:flex;align-items:center;justify-content:space-between}
+.wv i{display:block;width:5px;height:100%;border-radius:3px;background:#fff;transform:scaleY(.3);animation:wvIdle 1.3s ease-in-out infinite alternate}
+.wv i:nth-child(3n+1){height:78%}.wv i:nth-child(4n+2){height:58%}.wv i:nth-child(5n){height:92%}
+.wv i:nth-child(odd){animation-delay:-.6s}.wv i:nth-child(3n){animation-delay:-.25s}.wv i:nth-child(4n){animation-delay:-.9s}.wv i:nth-child(5n){animation-delay:-1.1s}
+@keyframes wvIdle{from{transform:scaleY(.12)}to{transform:scaleY(.45)}}
+.wv.hit-a i{animation:wvHa .75s cubic-bezier(.2,.8,.2,1),wvIdle 1.3s ease-in-out .75s infinite alternate}
+.wv.hit-b i{animation:wvHb .75s cubic-bezier(.2,.8,.2,1),wvIdle 1.3s ease-in-out .75s infinite alternate}
+@keyframes wvHa{0%{transform:scaleY(1);background-color:#FFE500}100%{transform:scaleY(.2);background-color:#fff}}
+@keyframes wvHb{0%{transform:scaleY(1);background-color:#FFE500}100%{transform:scaleY(.2);background-color:#fff}}
+.snd-hint{position:absolute;left:0;right:0;top:57%;margin:0;display:flex;align-items:center;justify-content:center;gap:7px;color:#BDBDBD;font-size:13px;font-weight:600}
+.pads{position:absolute;left:10px;right:10px;bottom:10px;z-index:5;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.pad{min-height:52px;border-radius:12px;border:1.5px solid #3A3A3A;background:#1C1C1C;color:#fff;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;transition:transform .08s ease,background-color .08s ease,color .08s ease,border-color .08s ease}
+.pad:hover{border-color:#fff}
+.pad:active{transform:scale(.96);background:#FFE500;border-color:#FFE500;color:#000}
+
+.packs{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:stretch}
+@media (min-width:700px){.packs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1180px){.packs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.pack{position:relative;display:flex;flex-direction:column;gap:18px;padding:26px 22px 22px;border-radius:24px}
+.segs{display:flex;gap:3px}
+.segs i{display:block;flex:1;height:4px;border-radius:2px;background:currentColor}
+.segs-dash i{background:repeating-linear-gradient(90deg,currentColor 0 10px,transparent 10px 16px);opacity:.75}
+.plist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:15.5px;line-height:1.35}
+.plist li{display:flex;align-items:flex-start;gap:9px}
+.plist svg{flex:0 0 18px;margin-top:1px}
+.tag{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;background:#262626;color:#fff;font-size:13.5px;font-weight:800}
+.tag-w{background:#fff;color:#000}
+.cfg{display:flex;flex-direction:column;gap:16px;padding:16px;border-radius:16px;background:#141414;border:1px solid #2A2A2A}
+.cfg-l{margin:0 0 8px;font-size:13px;font-weight:700;color:#BDBDBD}
+.step{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.stepb{flex:0 0 44px;width:44px;height:44px;border-radius:12px;border:1.5px solid #3A3A3A;background:#1C1C1C;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.stepb:hover{border-color:#fff}
+.stepb[disabled]{opacity:.35;cursor:not-allowed;border-color:#3A3A3A}
+.durs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.dchip{min-height:44px;padding:0 6px;border-radius:10px;border:1.5px solid #3A3A3A;background:#1C1C1C;color:#fff;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.dchip:hover{border-color:#fff}
+.dchip[aria-pressed="true"]{background:#fff;border-color:#fff;color:#000}
+.swr{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:4px 0;border:0;background:none;color:#fff;font-family:inherit;font-size:15px;font-weight:600;line-height:1.3;text-align:left;cursor:pointer}
+.knob{position:relative;display:block;flex:0 0 46px;height:28px;border-radius:14px;background:#3A3A3A;transition:background-color .15s}
+.knob::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:transform .15s,background-color .15s}
+.swr[aria-checked="true"] .knob{background:#FFE500}
+.swr[aria-checked="true"] .knob::after{transform:translateX(18px);background:#000}
+
+.tl{position:relative;margin-top:46px}
+.ruler{display:flex;justify-content:space-between;padding:0 2px 10px;border-bottom:1px solid #2A2A2A;color:#8F8F8F;font-size:13px;font-weight:600;font-stretch:112%;font-variant-numeric:tabular-nums}
+.clips{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.clip{position:relative;display:flex;flex-direction:column;gap:10px;padding:20px 18px 22px;border-radius:12px;background:#141414;border:1px solid #2A2A2A;overflow:hidden;opacity:clamp(.38,calc((var(--pp,1) - var(--at,0)) * 14 + .38),1);transition:opacity .2s}
+.clip::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:#FFE500;transform-origin:left center;transform:scaleX(clamp(0,calc((var(--pp,1) - var(--at,0)) * 5),1))}
+.at1{--at:0}.at2{--at:.22}.at3{--at:.44}.at4{--at:.66}
+@media (min-width:861px){.clips{grid-template-columns:repeat(4,minmax(0,1fr))}.clip.at2{margin-top:28px}.clip.at3{margin-top:56px}.clip.at4{margin-top:84px}}
+.phl{position:absolute;display:block;top:0;bottom:0;left:calc(var(--pp,0) * 100%);z-index:3;width:2px;margin-left:-1px;background:#FFE500;pointer-events:none}
+.phl::before{content:"";position:absolute;top:-2px;left:-6px;width:14px;height:12px;background:#FFE500;clip-path:polygon(0 0,100% 0,50% 100%)}
+@media (max-width:860px){.phl{display:none}}
+.cnum{font-family:'Archivo','Arial Narrow',sans-serif;font-stretch:62%;font-weight:900;font-size:44px;line-height:.9}
+
+.slate{position:relative;border-radius:22px;background:#0B0B0B;border:1px solid #2A2A2A;overflow:hidden}
+.clapper{position:relative;height:60px;background:#0B0B0B}
+.clap-top,.clap-bot{position:absolute;display:block;left:0;right:0;height:26px;background:repeating-linear-gradient(-45deg,#fff 0 20px,#111 20px 40px)}
+.clap-top{top:6px;transform-origin:12px 100%;transform:rotate(-8deg)}
+.clap-bot{bottom:2px}
+.clap-a .clap-top{animation:clapA .5s cubic-bezier(.6,0,.2,1) forwards}
+.clap-b .clap-top{animation:clapB .5s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes clapA{0%{transform:rotate(-8deg)}25%{transform:rotate(-20deg)}60%{transform:rotate(0deg)}75%{transform:rotate(-2deg)}100%{transform:rotate(0deg)}}
+@keyframes clapB{0%{transform:rotate(-8deg)}25%{transform:rotate(-20deg)}60%{transform:rotate(0deg)}75%{transform:rotate(-2deg)}100%{transform:rotate(0deg)}}
+.srow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #2A2A2A;border-bottom:1px solid #2A2A2A}
+.srow div{min-width:0;padding:10px 14px;border-right:1px solid #2A2A2A}
+.srow div:last-child{border-right:0}
+.srow small{display:block;color:#8F8F8F;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.srow b{display:block;margin-top:3px;font-size:15px;font-weight:800;font-stretch:88%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.field{display:flex;flex-direction:column;gap:7px}
+.field label{font-size:15px;font-weight:700}
+.field label em{font-style:normal;font-weight:500;color:#8F8F8F}
+.inp{width:100%;height:54px;padding:0 16px;border-radius:12px;border:1.5px solid #3A3A3A;background:#141414;color:#fff;font-family:inherit;font-size:17px;outline:none;transition:border-color .12s,box-shadow .12s}
+.inp::placeholder{color:#6F6F6F}
+.inp:focus{border-color:#FFE500;box-shadow:0 0 0 3px rgba(255,229,0,.25)}
+.inp[aria-invalid="true"]{border-color:#FF6B5E}
+.err{margin:0;color:#FF8A80;font-size:14px;font-weight:600}
+.pchips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pchip{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-height:58px;padding:8px 14px;border-radius:12px;border:1.5px solid #3A3A3A;background:#141414;color:#fff;font-family:inherit;text-align:left;cursor:pointer;transition:background-color .12s,border-color .12s,color .12s}
+.pchip:hover{border-color:#fff}
+.pchip b{font-size:15px;font-weight:800}
+.pchip span{font-size:13px;color:#BDBDBD}
+.pchip[aria-pressed="true"]{background:#FFE500;border-color:#FFE500;color:#000}
+.pchip[aria-pressed="true"] span{color:#000}
+.btn-fill{position:absolute;display:block;left:0;top:0;bottom:0;background:rgba(0,0,0,.16);pointer-events:none;transition:width .08s linear}
+
+.cm{border-radius:16px;background:#0B0B0B;border:1px solid #232323}
+.cm[open]{border-color:#3A3A3A}
+.cm summary{display:flex;align-items:center;gap:14px;min-height:68px;padding:14px 18px;cursor:pointer;list-style:none}
+.cm summary::-webkit-details-marker{display:none}
+.cm summary::marker{content:""}
+.cm summary:hover .pl{color:#fff}
+.pl{flex:0 0 auto;margin-left:auto;color:#8F8F8F;transition:transform .2s ease,color .12s}
+.cm[open] .pl{transform:rotate(45deg);color:#fff}
+.av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.rep{position:relative;display:flex;gap:14px;padding:2px 18px 20px 72px}
+.rep::before{content:"";position:absolute;left:37px;top:-10px;height:30px;width:2px;border-radius:1px;background:#2A2A2A}
+
+.cutline{position:absolute;left:0;right:0;top:50%;border-top:3px dashed rgba(255,255,255,.22)}
+.scis{position:absolute;left:3%;top:50%;translate:0 -50%;color:#fff}
+.bars{display:flex;height:52px}
+.bars i{display:block;flex:1}
+.foot{background:#000;border-top:1px solid #1A1A1A;padding:36px 0 128px}
+.cookie{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:80;max-width:560px;margin:0 auto;padding:18px;border-radius:18px;background:#141414;border:1px solid #3A3A3A;box-shadow:0 18px 50px rgba(0,0,0,.7);color:#fff}
+.cookie[hidden]{display:none}
+.cookie p{margin:0 0 14px;font-size:14.5px;line-height:1.5;color:#DADADA}
+.cookie-row{display:flex;flex-wrap:wrap;gap:10px}
+.cookie-row .btn{flex:1 1 140px;min-height:48px;font-size:15px}
+.sticky{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 16px;border-radius:18px;background:#141414;border:1px solid #2E2E2E;box-shadow:0 14px 40px rgba(0,0,0,.6);transform:translateY(150%);visibility:hidden;transition:transform .28s ease,visibility 0s linear .28s}
+:root[data-sticky="1"] .sticky{transform:none;visibility:visible;transition:transform .28s ease}
+
+@media (max-width:420px){.tcv{display:none}}
+@media (max-width:860px){
+.hide-sm{display:none!important}
+.vf{width:20px;height:20px}
+.vf-tl,.vf-tr{top:10px}
+.vf-bl,.vf-br{bottom:10px}
+.vf-tl,.vf-bl{left:10px}
+.vf-tr,.vf-br{right:10px}
+.rep{padding-left:18px}
+.rep::before{display:none}
+}
+@media (min-width:861px){
+.sticky{display:none}
+.foot{padding-bottom:44px}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+.beat{animation:none!important;opacity:0}
+.b7{opacity:1}
+.mire{display:none}
+.s-mot .sw{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div style="background: #000000; color: #FFFFFF; font-family: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif; overflow-x: clip">
+
+<header class="hdr">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none">
+<svg width="20" height="30" viewBox="0 0 20 30" aria-hidden="true"><rect x="1.25" y="1.25" width="17.5" height="27.5" rx="4" fill="none" stroke="#FFFFFF" stroke-width="2.5"></rect><circle cx="14" cy="6.6" r="2.6" fill="#FF3B30"></circle></svg>
+<span style="font-size: 19px; font-weight: 900; font-stretch: 75%; letter-spacing: .01em; text-transform: uppercase; white-space: nowrap">Wenov Short</span>
+</a>
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; font-stretch: 112%; font-variant-numeric: tabular-nums; color: #BDBDBD">
+<span class="rec"></span>
+<span style="color: #FFFFFF; font-weight: 800">REC</span>
+<span class="tcv"></span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<a href="../" class="sndbtn" lang="fr" hreflang="fr-CA" aria-label="Version française" style="text-decoration: none; font-size: 14px; font-weight: 800">FR</a>
+<button type="button" class="sndbtn" id="sndBtn" aria-pressed="false" aria-label="Turn on sound effects">
+<div data-if="soundOn" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4 4 0 0 1 0 6"></path><path d="M18.2 6.4a7.6 7.6 0 0 1 0 11.2"></path></svg></div>
+<div data-if="soundOff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M16 9.5l5 5"></path><path d="M21 9.5l-5 5"></path></svg></div>
+</button>
+<a href="#reserver" class="btn btn-y hide-sm" data-pick="prise1" style="min-height: 44px; padding: 0 18px; font-size: 15px">My free reel</a>
+</div>
+</div>
+<div class="story" aria-hidden="true"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+</header>
+
+<main>
+
+<section id="top" style="position: relative; padding: clamp(40px, 5vw, 76px) 0 clamp(60px, 7vw, 108px)">
+<span class="vf vf-tl" aria-hidden="true"></span>
+<span class="vf vf-tr" aria-hidden="true"></span>
+<span class="vf vf-bl" aria-hidden="true"></span>
+<span class="vf vf-br" aria-hidden="true"></span>
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 5vw, 80px)">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+<h1 class="cap" style="margin: 0; font-size: clamp(50px, 8vw, 118px)">
+<span style="display: block"><span class="kw k1">You</span> <span class="kw k2">film.</span></span>
+<span style="display: block"><span class="kw k3">We</span> <span class="kw k4">edit.</span></span>
+<span style="display: block"><span class="kw k5">The</span> <span class="kw k6">scroll</span></span>
+<span style="display: block"><span class="kw k7">stops.</span></span>
+</h1>
+<p style="margin: 0; max-width: 33em; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.5; color: #BDBDBD">Editing, animated captions, motion design, sound and color grading for your Reels, TikToks and YouTube Shorts. <strong style="color: #FFFFFF">Your first reel is on us, 100% free.</strong></p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#reserver" class="btn btn-y" data-pick="prise1" style="font-size: 18px">I want my free reel</a>
+<a href="#forfaits" class="btn btn-ghost">See the 4 packages</a>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 15px; color: #BDBDBD">
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>No credit card</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>No commitment</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Ready-to-post 9:16 format</li>
+</ul>
+</div>
+<div style="position: relative; flex: 0 0 auto; width: min(380px, 86vw); margin: 0 auto">
+<div data-if="showObjectif">
+<p style="position: absolute; z-index: 3; top: -22px; left: -16px; margin: 0; max-width: 220px; padding: 10px 14px; border-radius: 10px; background: #FFFFFF; color: #000000; font-size: 14px; font-weight: 800; line-height: 1.25; transform: rotate(-5deg); box-shadow: 0 12px 30px rgba(0,0,0,.55)">Our goal: become the #1 video editing studio in Quebec</p>
+</div>
+<figure class="monitor" id="monitor">
+<figcaption class="sr">Animated preview: raw footage becomes an edited, captioned, animated, color-graded and mixed reel, ready to post.</figcaption>
+<div class="mon-meta" aria-hidden="true"><span>Program</span><span>9:16, 1080&nbsp;×&nbsp;1920</span></div>
+<div class="screen">
+<div class="beat b1" aria-hidden="true" style="background: #000000">
+<span class="bw cap" style="font-size: 56px; color: #FFFFFF">Your footage</span>
+<span style="font-size: 15px; font-weight: 600; color: #BDBDBD">shot on your phone</span>
+</div>
+<div class="beat b2" aria-hidden="true" style="background: #FFE500">
+<span class="bw cap" style="font-size: 68px; color: #000000">Edited</span>
+</div>
+<div class="beat b3" aria-hidden="true" style="background: #F2F2F2">
+<span class="bw" style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span class="cap" style="font-size: 54px; color: #000000">Cap-</span>
+<span class="cap" style="padding: 2px 10px; border-radius: 4px; background: #FFE500; color: #000000; font-size: 54px">tioned</span>
+</span>
+</div>
+<div class="beat b4" aria-hidden="true" style="background: #000000">
+<span class="shape-c"></span>
+<span class="bw cap" style="position: relative; font-size: 62px; color: #000000">Animated</span>
+</div>
+<div class="beat b5" aria-hidden="true" style="background: linear-gradient(90deg, #8C8C8C 0 50%, #F2913D 50% 100%)">
+<span class="bw cap" style="font-size: 52px; color: #FFFFFF; text-shadow: 3px 0 0 #000000, -3px 0 0 #000000, 0 3px 0 #000000, 0 -3px 0 #000000">Graded</span>
+<span style="display: flex; gap: 46px; font-size: 13px; font-weight: 800; color: #000000"><span>Before</span><span>After</span></span>
+</div>
+<div class="beat b6" aria-hidden="true" style="background: #000000">
+<span class="mwv"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+<span class="bw cap" style="font-size: 62px; color: #FFFFFF">Mixed</span>
+</div>
+<div class="beat b7" aria-hidden="true" style="background: #FFE500">
+<span class="bw" style="display: flex; flex-direction: column; align-items: center; gap: 16px">
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M7.5 12.5l3 3L16.8 9"></path></svg>
+<span class="cap" style="font-size: 56px; line-height: .9; color: #000000">Ready<br>to post</span>
+</span>
+</div>
+<span class="safe" aria-hidden="true"></span>
+<div class="mire" aria-hidden="true">
+<div style="flex: 67"><i style="background: #BFBFBF"></i><i style="background: #BFBF00"></i><i style="background: #00BFBF"></i><i style="background: #00BF00"></i><i style="background: #BF00BF"></i><i style="background: #BF0000"></i><i style="background: #0000BF"></i></div>
+<div style="flex: 8"><i style="background: #0000BF"></i><i style="background: #131313"></i><i style="background: #BF00BF"></i><i style="background: #131313"></i><i style="background: #00BFBF"></i><i style="background: #131313"></i><i style="background: #BFBFBF"></i></div>
+<div style="flex: 25"><i style="flex: 5; background: #00214C"></i><i style="flex: 5; background: #FFFFFF"></i><i style="flex: 5; background: #32006A"></i><i style="flex: 6; background: #131313"></i><i style="flex: 1.2; background: #090909"></i><i style="flex: 1.2; background: #131313"></i><i style="flex: 1.2; background: #1D1D1D"></i><i style="flex: 3.4; background: #131313"></i></div>
+</div>
+</div>
+<div class="mon-ctl">
+<button type="button" class="playbtn" id="pauseBtn" aria-label="Pause the preview">
+<div data-if="paused" hidden><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></div>
+<div data-if="playing"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"></rect><rect x="13.5" y="5" width="4" height="14" rx="1.2" fill="currentColor"></rect></svg></div>
+</button>
+<span class="scrub" aria-hidden="true"><i></i></span>
+<span aria-hidden="true" style="font-size: 13px; font-weight: 600; font-stretch: 112%; font-variant-numeric: tabular-nums; color: #8F8F8F">0:06</span>
+</div>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="travail" style="padding: clamp(76px, 9vw, 136px) 0; border-top: 1px solid #1A1A1A">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-direction: column; gap: 22px">
+<h2 class="cap" style="margin: 0; max-width: 13ch; font-size: clamp(44px, 5.8vw, 88px)">Don’t take our word for it.</h2>
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.5; color: #BDBDBD">Watch our latest edits, then try our 4 ingredients yourself, right on this page.</p>
+<div data-if="showPortfolio">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 20px">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">Our latest edits</h3>
+<div class="rail">
+<figure class="reel"><video src="../media/reel1.mp4" poster="../media/reel1.jpg" muted loop playsinline preload="none" aria-label="Editing example: Real estate, talking head"></video><figcaption>Real estate, talking head</figcaption></figure>
+<figure class="reel"><video src="../media/reel2.mp4" poster="../media/reel2.jpg" muted loop playsinline preload="none" aria-label="Editing example: Construction, fast-paced edit"></video><figcaption>Construction, fast-paced edit</figcaption></figure>
+<figure class="reel"><video src="../media/reel3.mp4" poster="../media/reel3.jpg" muted loop playsinline preload="none" aria-label="Editing example: Property tour"></video><figcaption>Property tour</figcaption></figure>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 20px">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">Try our 4 ingredients</h3>
+<div class="rail">
+
+<article class="tile" aria-labelledby="t-subs">
+<h4 id="t-subs" class="tlabel">Animated captions</h4>
+<svg class="scene" viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<rect width="270" height="480" fill="#1A1A1A"></rect>
+<rect x="150" y="48" width="92" height="150" rx="6" fill="#272727"></rect>
+<path d="M196 48v150M150 123h92" stroke="#1A1A1A" stroke-width="4"></path>
+<path d="M26 480c8-80 52-114 109-114s101 34 109 114z" fill="#383838"></path>
+<rect x="118" y="318" width="34" height="48" rx="10" fill="#666666"></rect>
+<ellipse cx="135" cy="268" rx="54" ry="64" fill="#8C8C8C"></ellipse>
+<path d="M81 266c-6-54 24-84 55-84s60 28 52 84c-9-28-29-40-53-40s-45 12-54 40z" fill="#2A2A2A"></path>
+<circle cx="115" cy="268" r="4.5" fill="#1A1A1A"></circle>
+<circle cx="155" cy="268" r="4.5" fill="#1A1A1A"></circle>
+<ellipse class="mouth" cx="135" cy="300" rx="11" ry="5" fill="#3A2626"></ellipse>
+</svg>
+<p class="subs s-karaoke" id="subs" aria-hidden="true"><span class="sw sw1">Every</span><span class="sw sw2">word</span><span class="sw sw3">lands</span><span class="sw sw4">right</span><span class="sw sw5">on</span><span class="sw sw6">the</span><span class="sw sw7">beat.</span></p>
+<div class="tchips" role="group" aria-label="Caption style">
+<button type="button" class="tchip" data-sub="karaoke" aria-pressed="true">Karaoke</button>
+<button type="button" class="tchip" data-sub="boite" aria-pressed="false">Box</button>
+<button type="button" class="tchip" data-sub="mot" aria-pressed="false">Word by word</button>
+</div>
+</article>
+
+<article class="tile" id="demo-motion" aria-labelledby="t-motion" style="background: #000000">
+<h4 id="t-motion" class="tlabel">Motion design</h4>
+<div class="mo mo-idle" id="mo" aria-hidden="true">
+<span class="mo-ring"></span>
+<span class="mo-circle"></span>
+<span class="mo-bar"><span class="mo-mask"><span class="mo-w">Your</span></span><span class="mo-mask"><span class="mo-w mo-w2">logo</span></span></span>
+<span class="mo-dot"></span>
+<p class="mo-sub">Titles, logos, transitions</p>
+</div>
+<div class="tchips"><button type="button" class="tchip" id="moReplay">Replay the animation</button></div>
+</article>
+
+<article class="tile" aria-labelledby="t-grade">
+<h4 id="t-grade" class="tlabel">Color grading</h4>
+<div class="grade" id="grade">
+<svg viewBox="0 0 270 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs>
+<linearGradient id="gsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#27335E"></stop><stop offset=".55" stop-color="#E9835A"></stop><stop offset="1" stop-color="#FFD39A"></stop></linearGradient>
+<linearGradient id="gwat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0A06A"></stop><stop offset="1" stop-color="#1F2647"></stop></linearGradient>
+</defs>
+<rect width="270" height="300" fill="url(#gsky)"></rect>
+<circle cx="176" cy="236" r="24" fill="#FFF0C7"></circle>
+<path d="M0 262L40 226L74 246L118 204L160 240L196 214L236 244L270 228V300H0Z" fill="#6B4C72"></path>
+<path d="M0 280L52 252L96 270L140 248L186 272L230 254L270 270V300H0Z" fill="#3B2E52"></path>
+<rect y="296" width="270" height="184" fill="url(#gwat)"></rect>
+<g fill="#FFE2B0" opacity=".55"><rect x="150" y="318" width="52" height="3" rx="1.5"></rect><rect x="158" y="332" width="36" height="3" rx="1.5"></rect><rect x="146" y="348" width="60" height="2.5" rx="1.25"></rect><rect x="164" y="364" width="24" height="2.5" rx="1.25"></rect></g>
+<path d="M0 298H270V310H0Z" fill="#17142A"></path>
+<g fill="#120F20"><path d="M14 300L26 248L38 300Z"></path><path d="M30 300L44 236L58 300Z"></path><path d="M52 300L62 262L72 300Z"></path><path d="M196 300L206 266L216 300Z"></path><path d="M214 300L228 240L242 300Z"></path><path d="M236 300L248 256L260 300Z"></path></g>
+</svg>
+<span class="g-log" aria-hidden="true"></span>
+<span class="g-handle" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"></path></svg></span>
+<p class="g-tag g-tag-l" aria-hidden="true">LOG</p>
+<p class="g-tag g-tag-r" aria-hidden="true">Graded</p>
+<label class="sr" for="grade-range">Compare the image before and after grading</label>
+<input id="grade-range" class="sr" type="range" min="0" max="100" step="1">
+</div>
+</article>
+
+<article class="tile" aria-labelledby="t-son" style="background: #000000">
+<h4 id="t-son" class="tlabel">Sound and sound effects</h4>
+<div class="wv" id="wv" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<p class="snd-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"></path><rect x="3" y="14" width="4.5" height="6.5" rx="1.6"></rect><rect x="16.5" y="14" width="4.5" height="6.5" rx="1.6"></rect></svg>Tap a pad to hear it</p>
+<div class="pads" role="group" aria-label="Sound effects to play">
+<button type="button" class="pad" data-pad="whoosh">Whoosh</button>
+<button type="button" class="pad" data-pad="pop">Pop</button>
+<button type="button" class="pad" data-pad="impact">Impact</button>
+<button type="button" class="pad" data-pad="ding">Ding</button>
+</div>
+</article>
+
+</div>
+</div>
+<div style="display: flex; margin-top: 12px"><a href="#reserver" class="btn btn-y" data-pick="prise1">I want my free reel</a></div>
+</div>
+</section>
+
+<section id="forfaits" style="padding: clamp(76px, 9vw, 136px) 0; background: #0A0A0A; border-top: 1px solid #1A1A1A">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-direction: column; gap: 22px">
+<h2 class="cap" style="margin: 0; font-size: clamp(44px, 5.8vw, 88px)">4 packages. Zero fluff.</h2>
+<p style="margin: 0; max-width: 36em; font-size: 18px; line-height: 1.5; color: #BDBDBD">Start for free. Move up to a series when you’re ready. Flat prices, in Canadian dollars, plus tax.</p>
+<div class="packs" style="margin-top: 24px">
+
+<article class="pack" style="background: #FFE500; color: #000000">
+<div class="segs" aria-hidden="true"><i></i></div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h3 class="cap" style="margin: 0; font-size: 42px">Take 1</h3>
+<p style="margin: 0; font-size: 16px; font-weight: 700">1 edited reel, on us</p>
+</div>
+<div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 12px">
+<span class="cap" style="font-size: 76px; line-height: .8">$0</span>
+<span style="font-size: 15px; font-weight: 700">No credit card</span>
+</div>
+<ul class="plist">
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Full edit</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Animated captions</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Animations</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Sound processing</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Sound effects</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Color grading</span></li>
+</ul>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.4; font-weight: 600">One Take 1 per business. You supply the footage.</p>
+<a href="#reserver" class="btn btn-k" data-pick="prise1" style="margin-top: auto; width: 100%; padding: 12px 16px; font-size: 16px">100% FREE! Claim the offer!</a>
+</article>
+
+<article class="pack" style="background: #141414; color: #FFFFFF; border: 1px solid #2A2A2A">
+<div class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h3 class="cap" style="margin: 0; font-size: 42px">Mini series</h3>
+<p style="margin: 0; font-size: 16px; font-weight: 700">8 short videos, up to 30&nbsp;s each</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px">
+<span class="cap" style="font-size: 68px; line-height: .8">$320</span>
+<s style="font-size: 18px; font-weight: 700; color: #8F8F8F"><span class="sr">Regular price: </span>$500</s>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="tag tag-w">Save $180</span>
+<span class="tag">$40 per video</span>
+</div>
+<p style="margin: 0; font-size: 13px; color: #8F8F8F">Launch price, plus tax</p>
+</div>
+<ul class="plist">
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Full edit</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Animated captions</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Animations and motion design</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Color grading</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Sound processing and sound effects</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Ready-to-post 9:16 formats</span></li>
+</ul>
+<a href="#reserver" class="btn btn-o" data-pick="mini" style="margin-top: auto; width: 100%">Choose the Mini series</a>
+</article>
+
+<article class="pack" style="background: #000000; color: #FFFFFF; border: 2px solid #FFFFFF">
+<p style="position: absolute; top: -15px; right: 18px; margin: 0; padding: 6px 12px; border-radius: 999px; background: #FFFFFF; color: #000000; font-size: 13px; font-weight: 800">Best price per video</p>
+<div class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h3 class="cap" style="margin: 0; font-size: 42px">Full season</h3>
+<p style="margin: 0; font-size: 16px; font-weight: 700">12 short videos, up to 1&nbsp;min each</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px">
+<span class="cap" style="font-size: 68px; line-height: .8">$450</span>
+<s style="font-size: 18px; font-weight: 700; color: #8F8F8F"><span class="sr">Regular price: </span>$700</s>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span class="tag tag-w">Save $250</span>
+<span class="tag">$37.50 per video</span>
+</div>
+<p style="margin: 0; font-size: 13px; color: #8F8F8F">Launch price, plus tax</p>
+</div>
+<ul class="plist">
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Full edit</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Animated captions</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Motion design</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Color grading</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Sound processing and sound effects</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Ready-to-post 9:16 formats</span></li>
+</ul>
+<a href="#reserver" class="btn btn-w" data-pick="saison" style="margin-top: auto; width: 100%">Choose the Full season</a>
+</article>
+
+<article class="pack" style="background: #0A0A0A; color: #FFFFFF; border: 2px dashed #4A4A4A">
+<div class="segs segs-dash" aria-hidden="true"><i></i></div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h3 class="cap" style="margin: 0; font-size: 42px">Carte blanche</h3>
+<p style="margin: 0; font-size: 16px; font-weight: 700">Filming, quantity, length: you decide</p>
+</div>
+<span class="cap" style="font-size: 44px; line-height: .9">Custom quote</span>
+<div class="cfg">
+<div>
+<p class="cfg-l" id="cfg-q">Number of videos</p>
+<div class="step" role="group" aria-labelledby="cfg-q">
+<button type="button" class="stepb" aria-label="Fewer videos" id="qtyDec"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<output aria-live="polite" style="font-size: 24px; font-weight: 900; font-stretch: 75%; text-transform: uppercase" id="qtyOut">20&nbsp;videos</output>
+<button type="button" class="stepb" aria-label="More videos" id="qtyInc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</div>
+<div>
+<p class="cfg-l" id="cfg-d">Length per video</p>
+<div class="durs" role="group" aria-labelledby="cfg-d">
+<button type="button" class="dchip" data-dur="0" aria-pressed="false">15&nbsp;s</button>
+<button type="button" class="dchip" data-dur="1" aria-pressed="true">30&nbsp;s</button>
+<button type="button" class="dchip" data-dur="2" aria-pressed="false">60&nbsp;s</button>
+<button type="button" class="dchip" data-dur="3" aria-pressed="false">90&nbsp;s or more</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column">
+<button type="button" class="swr" role="switch" aria-checked="false" data-sw="shoot"><span>Video shoot, we film for you</span><span class="knob" aria-hidden="true"></span></button>
+<button type="button" class="swr" role="switch" aria-checked="false" data-sw="script"><span>Script and hooks</span><span class="knob" aria-hidden="true"></span></button>
+</div>
+<p style="margin: 0; padding-top: 12px; border-top: 1px solid #2A2A2A; font-size: 14px; line-height: 1.4"><span style="color: #8F8F8F">Your project: </span><strong class="js-cb">20 videos of 30&nbsp;s</strong></p>
+</div>
+<a href="#reserver" class="btn btn-o" data-pick="carte" style="margin-top: auto; width: 100%">Get my quote</a>
+</article>
+
+</div>
+<p style="margin: 6px 0 0; max-width: 62em; font-size: 14px; line-height: 1.55; color: #8F8F8F">Launch prices valid until November 30, 2026. Regular prices after that: $500 for the Mini series and $700 for the Full season. In Canadian dollars, plus tax.</p>
+</div>
+</section>
+
+<section id="etapes" style="padding: clamp(76px, 9vw, 136px) 0; border-top: 1px solid #1A1A1A">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px)">
+<h2 class="cap" style="margin: 0; font-size: clamp(44px, 5.8vw, 88px)">From raw footage to reel, in 4 steps.</h2>
+<div class="tl">
+<div class="ruler" aria-hidden="true"><span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span></div>
+<span class="phl" aria-hidden="true"></span>
+<ol class="clips">
+<li class="clip at1"><span class="cnum">1</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">Book</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">3 fields, 30 seconds. No credit card.</p></li>
+<li class="clip at2"><span class="cnum">2</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">Send your footage</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">A Google Drive or WeTransfer link is all it takes. Shot on a phone? Perfect.</p></li>
+<li class="clip at3"><span class="cnum">3</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">We edit</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">Editing, animated captions, motion design, sound and color grading.</p></li>
+<li class="clip at4"><span class="cnum">4</span><h3 style="margin: 0; font-size: 22px; font-weight: 800">You post</h3><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BDBDBD">A vertical 1080&nbsp;×&nbsp;1920 MP4, ready for Reels, TikTok and YouTube Shorts.</p></li>
+</ol>
+</div>
+</div>
+</section>
+
+<section id="reserver" style="padding: clamp(76px, 9vw, 136px) 0; background: #0A0A0A; border-top: 1px solid #1A1A1A">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-wrap: wrap; align-items: flex-start; gap: clamp(36px, 5vw, 88px)">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<h2 class="cap" style="margin: 0; font-size: clamp(44px, 5.4vw, 82px)" id="formTitle">Book your Take 1.</h2>
+<p style="margin: 0; max-width: 30em; font-size: 18px; line-height: 1.5; color: #BDBDBD">3 fields, 30 seconds. We get back to you within 1 business day with next steps.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 15px; color: #BDBDBD">
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>No credit card</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>No commitment</li>
+</ul>
+</div>
+<div style="flex: 1 1 440px; max-width: 580px; min-width: 0">
+<div class="slate">
+<div class="clapper" id="clapper" aria-hidden="true"><span class="clap-top"></span><span class="clap-bot"></span></div>
+<div class="srow" aria-hidden="true">
+<div><small>Prod.</small><b>Wenov Short</b></div>
+<div><small>Dir.</small><b id="slateReal">You</b></div>
+<div><small>Take</small><b id="slatePack">Take 1</b></div>
+</div>
+<div data-if="notSent">
+<form id="leadForm" novalidate style="display: flex; flex-direction: column; gap: 18px; padding: 22px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p id="pk-l" style="margin: 0; font-size: 15px; font-weight: 700">Your package</p>
+<div class="pchips" role="group" aria-labelledby="pk-l">
+<button type="button" class="pchip" data-pick="prise1" aria-pressed="true"><b>Take 1</b><span>Free</span></button>
+<button type="button" class="pchip" data-pick="mini" aria-pressed="false"><b>Mini series</b><span>$320</span></button>
+<button type="button" class="pchip" data-pick="saison" aria-pressed="false"><b>Full season</b><span>$450</span></button>
+<button type="button" class="pchip" data-pick="carte" aria-pressed="false"><b>Carte blanche</b><span>Custom quote</span></button>
+</div>
+</div>
+<div data-if="isCarte" hidden>
+<p style="margin: 0; padding: 12px 14px; border-radius: 12px; background: #141414; border: 1px solid #2A2A2A; font-size: 14px; line-height: 1.45"><span style="color: #8F8F8F">Your project: </span><strong class="js-cb">20 videos of 30&nbsp;s</strong>. <a href="#forfaits" style="font-weight: 700">Edit</a></p>
+</div>
+<div class="sr" aria-hidden="true"><label for="f-hp">Leave empty</label><input id="f-hp" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+<div class="field">
+<label for="f-prenom">First name</label>
+<input id="f-prenom" class="inp" name="prenom" type="text" autocomplete="given-name" aria-invalid="false" aria-describedby="e-prenom">
+<div data-if="hasErrP" hidden><p id="e-prenom" class="err"></p></div>
+</div>
+<div class="field">
+<label for="f-courriel">Email</label>
+<input id="f-courriel" class="inp" name="courriel" type="email" inputmode="email" autocomplete="email" placeholder="name@company.com" aria-invalid="false" aria-describedby="e-courriel">
+<div data-if="hasErrC" hidden><p id="e-courriel" class="err"></p></div>
+</div>
+<div class="field">
+<label for="f-compte">Instagram, TikTok or website <em>(optional)</em></label>
+<input id="f-compte" class="inp" name="compte" type="text" placeholder="@yourbrand">
+</div>
+<button type="submit" class="btn btn-y" id="submitBtn" style="width: 100%; min-height: 60px; overflow: hidden; font-size: 18px"><span class="btn-fill" id="btnFill" style="width: 0%"></span><span style="position: relative" id="submitText">Book my free Take 1</span></button>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #A8A8A8">Your information is only used to answer your request. See our <a href="privacy.html">privacy policy</a>.</p>
+</form>
+</div>
+<div data-if="isSent" hidden>
+<div role="status" style="display: flex; flex-direction: column; gap: 16px; padding: 26px 22px 24px">
+<h3 class="cap" style="margin: 0; font-size: 44px">That’s a wrap, <span id="sentName"></span>!</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.5; color: #BDBDBD">We’ll email you at <strong style="color: #FFFFFF"><span id="sentEmail"></span></strong> within 1 business day <span id="sentNext">with the link to upload your footage.</span></p>
+<p style="margin: 6px 0 0; font-size: 15px; font-weight: 800">In the meantime, 3 habits for footage that’s easy to edit</p>
+<ul class="plist">
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Shoot vertically, with the phone at eye level.</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Face a window, not your back to it.</span></li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>Leave 2 seconds before and after each take.</span></li>
+</ul>
+<button type="button" class="btn btn-ghost" id="resetBtn" style="align-self: flex-start">Edit my request</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="faq" style="padding: clamp(76px, 9vw, 136px) 0; border-top: 1px solid #1A1A1A">
+<div style="max-width: 900px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-direction: column; gap: 26px">
+<h2 style="margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px"><span class="cap" style="font-size: clamp(40px, 5.8vw, 88px)">Comments</span><span style="font-size: 22px; font-weight: 800; color: #8F8F8F; font-variant-numeric: tabular-nums">5</span></h2>
+<div style="display: flex; flex-direction: column; gap: 12px">
+
+<details class="cm">
+<summary><span class="av" style="background: #262626; color: #BDBDBD"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5 19.5a7 7 0 0 1 14 0"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">You</span><span style="font-size: 17px; font-weight: 700; line-height: 1.35">The free reel… what’s the catch?</span></span><svg class="pl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<div class="rep"><span class="av" style="background: #FFFFFF; color: #000000; font-weight: 900; font-stretch: 75%; font-size: 18px">W</span><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Wenov Short</span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DADADA">There isn’t one. We edit your real content so you can judge the work for yourself. Like it? We talk packages. If not, you keep your reel. One Take 1 per business.</p></div></div>
+</details>
+
+<details class="cm">
+<summary><span class="av" style="background: #262626; color: #BDBDBD"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5 19.5a7 7 0 0 1 14 0"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">You</span><span style="font-size: 17px; font-weight: 700; line-height: 1.35">What do I need to send you?</span></span><svg class="pl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<div class="rep"><span class="av" style="background: #FFFFFF; color: #000000; font-weight: 900; font-stretch: 75%; font-size: 18px">W</span><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Wenov Short</span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DADADA">Your raw footage, even if it’s shot on a phone, and your logo. Your brand colors and fonts too, if you have them. We send you an upload link after you book.</p></div></div>
+</details>
+
+<details class="cm">
+<summary><span class="av" style="background: #262626; color: #BDBDBD"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5 19.5a7 7 0 0 1 14 0"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">You</span><span style="font-size: 17px; font-weight: 700; line-height: 1.35">How long until I get my video?</span></span><svg class="pl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<div class="rep"><span class="av" style="background: #FFFFFF; color: #000000; font-weight: 900; font-stretch: 75%; font-size: 18px">W</span><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Wenov Short</span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DADADA">Your Take 1 arrives within 3 business days of receiving your footage. For packages, we build the delivery schedule with you.</p></div></div>
+</details>
+
+<details class="cm">
+<summary><span class="av" style="background: #262626; color: #BDBDBD"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5 19.5a7 7 0 0 1 14 0"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">You</span><span style="font-size: 17px; font-weight: 700; line-height: 1.35">I don’t have any footage. Can you film?</span></span><svg class="pl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<div class="rep"><span class="av" style="background: #FFFFFF; color: #000000; font-weight: 900; font-stretch: 75%; font-size: 18px">W</span><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Wenov Short</span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DADADA">Yes. Choose Carte blanche and turn on the Video shoot option: we’ll add it to your quote.</p></div></div>
+</details>
+
+<details class="cm">
+<summary><span class="av" style="background: #262626; color: #BDBDBD"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"></circle><path d="M5 19.5a7 7 0 0 1 14 0"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">You</span><span style="font-size: 17px; font-weight: 700; line-height: 1.35">What if I don’t like the edit?</span></span><svg class="pl" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary>
+<div class="rep"><span class="av" style="background: #FFFFFF; color: #000000; font-weight: 900; font-stretch: 75%; font-size: 18px">W</span><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #8F8F8F">Wenov Short</span><p style="margin: 0; font-size: 16px; line-height: 1.55; color: #DADADA">One round of revisions is included for every video: pacing, text, music, colors.</p></div></div>
+</details>
+
+</div>
+</div>
+</section>
+
+<section id="coupez" style="position: relative; overflow: hidden; padding: clamp(84px, 10vw, 150px) 0 0; background: #000000; border-top: 1px solid #1A1A1A">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
+<div style="position: relative; width: 100%; display: flex; justify-content: center">
+<span class="cutline" aria-hidden="true"></span>
+<svg class="scis" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M8.6 7.6L20 18M8.6 16.4L20 6"></path></svg>
+<h2 class="cap" style="position: relative; margin: 0; padding: 0 .12em; background: #000000; font-size: clamp(72px, 19vw, 300px); line-height: .8">Cut!</h2>
+</div>
+<p style="margin: 0; max-width: 30em; font-size: clamp(18px, 1.5vw, 22px); line-height: 1.5; color: #BDBDBD">Is that a keeper? Your first reel is free. All we need is your footage.</p>
+<a href="#reserver" class="btn btn-y" data-pick="prise1" style="min-height: 64px; padding: 12px 34px; font-size: 19px">100% FREE! Claim the offer!</a>
+</div>
+<div class="bars" aria-hidden="true" style="margin-top: clamp(64px, 8vw, 120px)"><i style="background: #BFBFBF"></i><i style="background: #BFBF00"></i><i style="background: #00BFBF"></i><i style="background: #00BF00"></i><i style="background: #BF00BF"></i><i style="background: #BF0000"></i><i style="background: #0000BF"></i></div>
+</section>
+
+</main>
+
+<footer class="foot">
+<div style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; font-size: 14px; line-height: 1.6; color: #8F8F8F">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="color: #FFFFFF; font-size: 18px; font-weight: 900; font-stretch: 75%; text-transform: uppercase">Wenov Short</span>
+<span>Short-form video editing studio in Quebec.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span>Prices in Canadian dollars, plus tax.</span>
+<span><a href="privacy.html" style="color: #BDBDBD">Privacy policy</a> · <button type="button" id="cookieBtn" style="padding: 0; border: 0; background: none; color: #BDBDBD; font: inherit; text-decoration: underline; cursor: pointer">Manage cookies</button></span>
+<span>© 2026 Wenov Short</span>
+</div>
+</div>
+</footer>
+
+<div class="cookie" id="cookie" role="dialog" aria-labelledby="cookie-t" hidden>
+<p id="cookie-t">We use advertising measurement cookies (Meta) to learn which ads work. They only turn on with your consent. <a href="privacy.html">Learn more</a></p>
+<div class="cookie-row"><button type="button" class="btn btn-ghost" id="cookieNo">Decline</button><button type="button" class="btn btn-y" id="cookieYes">Accept</button></div>
+</div>
+
+<div class="sticky">
+<span style="display: flex; flex-direction: column; gap: 2px; line-height: 1.2"><strong style="font-size: 15px">1 reel, 100% free</strong><span style="font-size: 13px; color: #BDBDBD">No credit card</span></span>
+<a href="#reserver" class="btn btn-y" data-pick="prise1" style="min-height: 48px; padding: 0 18px; font-size: 15px">Claim the offer!</a>
+</div>
+
+</div>
+
+<script>
+/* ===== Réglages à compléter ===== */
+const CONFIG = {
+  // URL qui reçoit les demandes (Formspree, webhook Make ou Zapier, GHL...). Vide = mode démo, rien n'est envoyé.
+  endpoint: 'https://formsubmit.co/ajax/05c08e2595ea16120444862c11a171f1',
+  // Courriel affiché si l'envoi échoue.
+  courrielSecours: '',
+  // ID du pixel Meta (chiffres seulement). Vide = aucun pixel ni bannière de témoins.
+  metaPixelId: ''
+};
+/* ================================ */
+
+(function () {
+  const $ = (sel, root) => (root || document).querySelector(sel);
+  const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+  const de = document.documentElement;
+  const NBSP = ' ';
+  const QTY = [4, 8, 12, 16, 20, 30, 40, 60];
+  const DUR = ['15' + NBSP + 's', '30' + NBSP + 's', '60' + NBSP + 's', '90' + NBSP + 's or more'];
+  const PACKS = {
+    prise1: { name: 'Take 1', title: 'Book your Take 1.', cta: 'Book my free Take 1', value: 0 },
+    mini: { name: 'Mini series', title: 'Book your Mini series.', cta: 'Book the Mini series', value: 320 },
+    saison: { name: 'Full season', title: 'Book your Full season.', cta: 'Book the Full season', value: 450 },
+    carte: { name: 'Carte blanche', title: 'Request your quote.', cta: 'Get my quote', value: 0 }
+  };
+  const st = { sound: false, pack: 'prise1', qi: 4, dur: 1, shoot: false, script: false, mo: 0, hit: 0, clap: 0, busy: false };
+
+  const utm = {};
+  try {
+    const q = new URLSearchParams(location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'].forEach((k) => { if (q.get(k)) utm[k] = q.get(k); });
+  } catch (e) { /* aucun paramètre */ }
+
+  const showIf = (name, on) => $$('[data-if="' + name + '"]').forEach((el) => { el.hidden = !on; });
+  const track = (event, params) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: event }, params));
+    if (typeof window.fbq === 'function' && event === 'generate_lead') window.fbq('track', 'Lead', { content_name: params.forfait, value: params.valeur, currency: 'CAD' });
+  };
+
+  /* ---- Son ---- */
+  let ac = null;
+  function audio() {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    if (!ac) ac = new AC();
+    if (ac.state === 'suspended') ac.resume();
+    return ac;
+  }
+  function noise(a, dur) {
+    const len = Math.max(1, Math.floor(a.sampleRate * dur));
+    const buf = a.createBuffer(1, len, a.sampleRate);
+    const d = buf.getChannelData(0);
+    for (let i = 0; i < len; i += 1) d[i] = Math.random() * 2 - 1;
+    const src = a.createBufferSource();
+    src.buffer = buf;
+    return src;
+  }
+  function env(a, t, peak, att, rel) {
+    const g = a.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(peak, t + att);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + att + rel);
+    g.connect(a.destination);
+    return g;
+  }
+  function osc(a, t, type, f0, f1, dur, peak, att, rel) {
+    const o = a.createOscillator();
+    o.type = type;
+    o.frequency.setValueAtTime(f0, t);
+    if (f1) o.frequency.exponentialRampToValueAtTime(f1, t + dur);
+    o.connect(env(a, t, peak, att, rel));
+    o.start(t);
+    o.stop(t + att + rel + 0.05);
+  }
+  function burst(a, t, type, freq, dur, peak, att, rel, sweep) {
+    const n = noise(a, dur);
+    const f = a.createBiquadFilter();
+    f.type = type;
+    f.frequency.setValueAtTime(freq, t);
+    if (sweep) { f.Q.value = 1.4; f.frequency.exponentialRampToValueAtTime(sweep, t + 0.38); }
+    n.connect(f);
+    f.connect(env(a, t, peak, att, rel));
+    n.start(t);
+    n.stop(t + dur);
+  }
+  function sfx(name, force) {
+    if (!force && !st.sound) return;
+    const a = audio();
+    if (!a) return;
+    const t = a.currentTime + 0.01;
+    if (name === 'whoosh') burst(a, t, 'bandpass', 260, 0.6, 0.55, 0.16, 0.36, 3800);
+    else if (name === 'pop') osc(a, t, 'sine', 880, 170, 0.09, 0.45, 0.004, 0.12);
+    else if (name === 'impact') { osc(a, t, 'sine', 150, 42, 0.5, 0.9, 0.005, 0.7); burst(a, t, 'lowpass', 900, 0.3, 0.35, 0.002, 0.22); }
+    else if (name === 'ding') { [[1318.5, 0.2], [1975.5, 0.09], [2637, 0.04]].forEach((h) => osc(a, t, 'sine', h[0], 0, 0, h[1], 0.004, 1.3)); }
+    else if (name === 'clap') { [0, 0.014].forEach((d) => burst(a, t + d, 'highpass', 1100, 0.12, 0.8, 0.001, 0.08)); }
+    else if (name === 'tick') osc(a, t, 'square', 1900, 0, 0, 0.05, 0.001, 0.025);
+  }
+
+  /* ---- Forfaits et configurateur ---- */
+  function cbText() {
+    let t = QTY[st.qi] + ' videos of ' + DUR[st.dur];
+    if (st.shoot) t += ', video shoot included';
+    if (st.script) t += ', script and hooks included';
+    return t;
+  }
+  function renderPack() {
+    const p = PACKS[st.pack];
+    $$('.pchip').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.pick === st.pack)));
+    $('#formTitle').textContent = p.title;
+    $('#slatePack').textContent = p.name;
+    if (!st.busy) $('#submitText').textContent = p.cta;
+    showIf('isCarte', st.pack === 'carte');
+  }
+  function renderCfg() {
+    $('#qtyOut').textContent = QTY[st.qi] + NBSP + 'videos';
+    $('#qtyDec').disabled = st.qi === 0;
+    $('#qtyInc').disabled = st.qi === QTY.length - 1;
+    $$('.dchip').forEach((b) => b.setAttribute('aria-pressed', String(Number(b.dataset.dur) === st.dur)));
+    $$('[data-sw]').forEach((b) => b.setAttribute('aria-checked', String(st[b.dataset.sw])));
+    $$('.js-cb').forEach((el) => { el.textContent = cbText(); });
+  }
+
+  document.addEventListener('click', (e) => {
+    const pick = e.target.closest('[data-pick]');
+    if (pick) {
+      st.pack = pick.dataset.pick;
+      renderPack();
+      sfx('pop');
+      track('select_forfait', { forfait: st.pack });
+    }
+    const sub = e.target.closest('[data-sub]');
+    if (sub) {
+      $('#subs').className = 'subs s-' + sub.dataset.sub;
+      $$('[data-sub]').forEach((b) => b.setAttribute('aria-pressed', String(b === sub)));
+      sfx('tick');
+    }
+    const pad = e.target.closest('[data-pad]');
+    if (pad) {
+      sfx(pad.dataset.pad, true);
+      st.hit += 1;
+      $('#wv').className = 'wv ' + (st.hit % 2 ? 'hit-a' : 'hit-b');
+    }
+    const dur = e.target.closest('[data-dur]');
+    if (dur) { st.dur = Number(dur.dataset.dur); renderCfg(); sfx('tick'); }
+    const sw = e.target.closest('[data-sw]');
+    if (sw) { st[sw.dataset.sw] = !st[sw.dataset.sw]; renderCfg(); sfx('tick'); }
+  });
+  $('#qtyDec').addEventListener('click', () => { if (st.qi > 0) { st.qi -= 1; renderCfg(); sfx('tick'); } });
+  $('#qtyInc').addEventListener('click', () => { if (st.qi < QTY.length - 1) { st.qi += 1; renderCfg(); sfx('tick'); } });
+
+  /* ---- Son, lecture, motion ---- */
+  $('#sndBtn').addEventListener('click', () => {
+    st.sound = !st.sound;
+    const b = $('#sndBtn');
+    b.setAttribute('aria-pressed', String(st.sound));
+    b.setAttribute('aria-label', st.sound ? 'Turn off sound effects' : 'Turn on sound effects');
+    showIf('soundOn', st.sound);
+    showIf('soundOff', !st.sound);
+    if (st.sound) sfx('ding', true);
+  });
+  $('#pauseBtn').addEventListener('click', () => {
+    const m = $('#monitor');
+    const paused = !m.classList.contains('is-paused');
+    m.classList.toggle('is-paused', paused);
+    $('#pauseBtn').setAttribute('aria-label', paused ? 'Play the preview' : 'Pause the preview');
+    showIf('paused', paused);
+    showIf('playing', !paused);
+    sfx('tick');
+  });
+  function playMotion() {
+    st.mo += 1;
+    $('#mo').className = 'mo ' + (st.mo % 2 ? 'mo-a' : 'mo-b');
+  }
+  $('#moReplay').addEventListener('click', () => { playMotion(); sfx('whoosh'); });
+  const motionTile = $('#demo-motion');
+  if ('IntersectionObserver' in window && motionTile) {
+    const io = new IntersectionObserver((es) => {
+      if (es.some((x) => x.isIntersecting)) { if (st.mo === 0) playMotion(); io.disconnect(); }
+    }, { threshold: 0.45 });
+    io.observe(motionTile);
+  }
+
+  /* ---- Étalonnage avant / après ---- */
+  const grade = $('#grade');
+  let drag = false;
+  const setCut = (x) => {
+    const r = grade.getBoundingClientRect();
+    const v = Math.min(1, Math.max(0, (x - r.left) / Math.max(1, r.width)));
+    grade.style.setProperty('--cut', (v * 100).toFixed(1) + '%');
+  };
+  grade.addEventListener('pointerdown', (e) => { drag = true; try { grade.setPointerCapture(e.pointerId); } catch (err) { drag = true; } setCut(e.clientX); });
+  grade.addEventListener('pointermove', (e) => { if (drag) setCut(e.clientX); });
+  ['pointerup', 'pointercancel'].forEach((n) => grade.addEventListener(n, () => { drag = false; }));
+  $('#grade-range').addEventListener('input', (e) => grade.style.setProperty('--cut', e.target.value + '%'));
+
+  /* ---- Formulaire ---- */
+  const form = $('#leadForm');
+  const prenomInput = $('#f-prenom');
+  prenomInput.addEventListener('input', () => { $('#slateReal').textContent = prenomInput.value.trim().slice(0, 40) || 'You'; });
+  function setErr(id, wrap, msg) {
+    $('#' + id).textContent = msg;
+    showIf(wrap, !!msg);
+  }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (st.busy) return;
+    const fd = new FormData(form);
+    const prenom = String(fd.get('prenom') || '').trim();
+    const courriel = String(fd.get('courriel') || '').trim();
+    const compte = String(fd.get('compte') || '').trim();
+    const errP = prenom ? '' : 'Enter your first name.';
+    let errC = '';
+    if (!courriel) errC = 'Enter your email.';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(courriel)) errC = 'This email looks incomplete. Example: name@company.com';
+    $('#f-prenom').setAttribute('aria-invalid', String(!!errP));
+    $('#f-courriel').setAttribute('aria-invalid', String(!!errC));
+    setErr('e-prenom', 'hasErrP', errP);
+    setErr('e-courriel', 'hasErrC', errC);
+    if (errP || errC) { (errP ? $('#f-prenom') : $('#f-courriel')).focus(); return; }
+
+    const lead = {
+      forfait: PACKS[st.pack].name,
+      prenom: prenom,
+      courriel: courriel,
+      compte: compte,
+      carte_blanche: st.pack === 'carte' ? cbText() : '',
+      page: location.href,
+      date: new Date().toISOString()
+    };
+    Object.assign(lead, utm);
+    if (String(fd.get('_honey') || '')) return;
+    lead._subject = 'New Wenov Short request (EN): ' + lead.forfait + ' (' + prenom + ')';
+    lead._template = 'table';
+    lead.email = courriel;
+    lead._replyto = courriel;
+
+    st.busy = true;
+    st.clap += 1;
+    $('#clapper').className = 'clapper ' + (st.clap % 2 ? 'clap-a' : 'clap-b');
+    $('#submitBtn').disabled = true;
+    sfx('clap');
+    let p = 0;
+    const timer = setInterval(() => {
+      p = Math.min(92, p + 8);
+      $('#btnFill').style.width = p + '%';
+      $('#submitText').textContent = 'Rendering… ' + p + NBSP + '%';
+    }, 80);
+
+    let ok = true;
+    if (CONFIG.endpoint) {
+      try {
+        const res = await fetch(CONFIG.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(lead) });
+        const data = await res.json().catch(() => ({}));
+        ok = res.ok && String(data.success) === 'true';
+      } catch (err) {
+        ok = false;
+      }
+    } else {
+      await new Promise((r) => setTimeout(r, 900));
+    }
+    clearInterval(timer);
+    st.busy = false;
+    $('#submitBtn').disabled = false;
+    $('#btnFill').style.width = '0%';
+    $('#submitText').textContent = PACKS[st.pack].cta;
+    if (!ok) {
+      setErr('e-courriel', 'hasErrC', 'Your request didn’t go through. Please try again in a moment.');
+      return;
+    }
+    track('generate_lead', { forfait: lead.forfait, valeur: PACKS[st.pack].value });
+    $('#sentName').textContent = prenom;
+    $('#sentEmail').textContent = courriel;
+    $('#sentNext').textContent = st.pack === 'carte' ? 'with your quote.' : 'with the link to upload your footage.';
+    showIf('notSent', false);
+    showIf('isSent', true);
+    sfx('ding');
+  });
+  $('#resetBtn').addEventListener('click', () => {
+    form.reset();
+    $('#slateReal').textContent = 'You';
+    $('#clapper').className = 'clapper';
+    showIf('isSent', false);
+    showIf('notSent', true);
+  });
+
+  /* ---- Défilement : timecode, Stories, tête de lecture, barre collante ---- */
+  const elStory = $('.story');
+  const elTc = $('.tcv');
+  const elTl = $('.tl');
+  const last = {};
+  const setVar = (el, k, v) => { if (el && last[k] !== v) { el.style.setProperty(k, v); last[k] = v; } };
+  function tick() {
+    const vh = window.innerHeight || 1;
+    const max = Math.max(1, de.scrollHeight - vh);
+    const p = Math.min(1, Math.max(0, (window.scrollY || 0) / max));
+    const fr = Math.round(p * 1799);
+    setVar(elTc, '--tc-s', String(Math.floor(fr / 30)));
+    setVar(elTc, '--tc-f', String(fr % 30));
+    ['top', 'travail', 'forfaits', 'etapes', 'reserver', 'faq', 'coupez'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      let v = Math.min(1, Math.max(0, (vh * 0.5 - r.top) / Math.max(1, r.height)));
+      if (p > 0.995) v = 1;
+      setVar(elStory, '--s' + i, v.toFixed(3));
+    });
+    if (elTl) {
+      const r = elTl.getBoundingClientRect();
+      setVar(elTl, '--pp', Math.min(1, Math.max(0, (vh * 0.72 - r.top) / Math.max(1, r.height * 0.8))).toFixed(3));
+    }
+    let show = $('#top').getBoundingClientRect().bottom < 0;
+    const fr2 = $('#reserver').getBoundingClientRect();
+    if (show && fr2.top < vh && fr2.bottom > 0) show = false;
+    const flag = show ? '1' : '0';
+    if (last.sticky !== flag) { de.setAttribute('data-sticky', flag); last.sticky = flag; }
+  }
+  let raf = 0;
+  const onScroll = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; tick(); }); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', onScroll);
+  tick();
+
+  /* ---- Témoins et pixel Meta (Loi 25 : rien ne s'active sans accord) ---- */
+  const KEY = 'wenov-consent';
+  const getC = () => { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+  const setC = (v) => { try { localStorage.setItem(KEY, v); } catch (e) { /* stockage indisponible */ } };
+  function loadPixel() {
+    if (!CONFIG.metaPixelId || window.fbq) return;
+    /* eslint-disable */
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init', CONFIG.metaPixelId);
+    window.fbq('track', 'PageView');
+  }
+  const banner = $('#cookie');
+  const cookieBtn = $('#cookieBtn');
+  if (!CONFIG.metaPixelId) { if (cookieBtn) cookieBtn.parentElement.innerHTML = '<a href="privacy.html" style="color: #BDBDBD">Privacy policy</a>'; }
+  else {
+    if (getC() === 'oui') loadPixel();
+    else if (getC() !== 'non') banner.hidden = false;
+    $('#cookieYes').addEventListener('click', () => { setC('oui'); banner.hidden = true; loadPixel(); });
+    $('#cookieNo').addEventListener('click', () => { setC('non'); banner.hidden = true; });
+    cookieBtn.addEventListener('click', () => { banner.hidden = false; });
+  }
+
+  /* ---- Portfolio : lecture automatique quand visible ---- */
+  const reels = $$('.reel video');
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    const vio = new IntersectionObserver((es) => es.forEach((x) => {
+      const v = x.target;
+      if (x.isIntersecting) { if (v.preload === 'none') v.preload = 'auto'; const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); }
+      else v.pause();
+    }), { threshold: 0.4 });
+    reels.forEach((v) => vio.observe(v));
+  } else reels.forEach((v) => { v.controls = true; });
+  renderPack();
+  renderCfg();
+}());
+
+</script>
+</body>
+</html>
